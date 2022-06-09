@@ -3,7 +3,7 @@
   define('DB_HOST', 'localhost');
   define('DB_USER', 'root');
   define('DB_PASS', '');
-  define('DB_NAME', 'barber');
+  define('DB_NAME', 'barber-shop');
 
   // App Root
   define('APPROOT', dirname(dirname(__FILE__)));//file path

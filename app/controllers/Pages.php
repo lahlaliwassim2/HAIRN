@@ -1,7 +1,8 @@
 <?php
   class Pages extends Controller {
     public function __construct(){
-     
+      $this->ProductModel= $this->model('ProduitModel');
+
     }
     
     public function index(){
@@ -19,4 +20,13 @@
 
       $this->view('pages/about', $data);
     }
+    public function contact(){
+     
+      $this->view('pages/contact');
+    }
+    public function produits(){
+      $AllProducts = $this->ProductModel->getAllProducts();
+      $this->view('pages/products',$AllProducts);
+    }
   }
+   

@@ -16,7 +16,7 @@
 
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <a href="<?php echo URLROOT?>/pages/index.php" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary text-uppercase">barber</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
@@ -28,7 +28,7 @@
                                 <a href="index.html" class="nav-item nav-link active">Home</a>
                                 <a href="about.html" class="nav-item nav-link">About</a>
                                 <a href="service.html" class="nav-item nav-link">Services</a>
-                                <a href="Produits.html" class="nav-item nav-link">Products</a>
+                                <a href="<?php echo URLROOT ?>/pages/produits" class="nav-item nav-link">Products</a>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                                 <a href="profil-client.html" class="nav-item nav-link">profil</a>
                             </div>

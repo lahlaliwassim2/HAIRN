@@ -24,7 +24,7 @@
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
       );
 
-      // Create PDO instance
+      // Create  PDO instance
       try{
         $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
       } catch(PDOException $e){
