@@ -1,48 +1,12 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-  <h1><?php echo $data['title']; ?></h1>
+<?php require APPROOT . '/views/inc/navbar-client.php'; ?>
+  
   <div class="container-xxl bg-white p-0">
         
-        <!-- Header Start -->
-        <div class="container-fluid bg-dark px-0">
-            <div class="row gx-0">
-                <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h1 class="m-0 text-primary text-uppercase">Barber</h1>
-                    </a>
-                </div>
-                <div class="col-lg-9">
-                    <div class="row gx-0 bg-white d-none d-lg-flex">
-                        <div class="col-lg-7 px-5 text-start">
-                         
-                        </div>
-                       
-                    </div>
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                        <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary text-uppercase">barber</h1>
-                        </a>
-                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto py-0">
-                                <a href="index.html" class="nav-item nav-link active">Home</a>
-                                <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Services</a>
-                                <a href="Product.html" class="nav-item nav-link">Products</a>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            </div>
-                            <a href="Rendez-vous.html" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">rendez-vous<i class="fa fa-arrow-right ms-3"></i></a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-
+       
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(<?php echo URLROOT ?>/img/carousel-1.jpg" alt="">);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
@@ -103,16 +67,16 @@
                 <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style="margin-top: 25%;">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="<?php echo URLROOT ?>/img/about-1.jpg" alt="">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="<?php echo URLROOT ?>/img/about-2.jpg" alt="">">
                         </div>
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="<?php echo URLROOT ?>/img/about-3.jpg" alt="">">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="<?php echo URLROOT ?>/img/about-4.jpg" alt="">">
                         </div>
                     </div>
                 </div>
@@ -131,10 +95,11 @@
             <h1 class="mb-5">Découvrez notre <span class="text-primary text-uppercase">coifeurs</span></h1>
         </div>
         <div class="row g-4">
+            <?php foreach($data as $coiffeur): ?>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="rounded shadow overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid" src="<?php echo URLROOT ?>/img/team-1.jpg" alt="">
                         <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                             <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -142,59 +107,12 @@
                         </div>
                     </div>
                     <div class="text-center p-4 mt-3">
-                        <h5 class="fw-bold mb-0">wassim lahlali</h5>
-                        <small>chaise A</small>
+                        <h5 class="fw-bold mb-0"><?= $coiffeur->nom?></h5>
+                        <small class="text-uppercase">chaise <?= $coiffeur->chaise ?></small>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="rounded shadow overflow-hidden">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 mt-3">
-                        <h5 class="fw-bold mb-0">Nourdine maher</h5>
-                        <small>chaise B</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="rounded shadow overflow-hidden">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 mt-3">
-                        <h5 class="fw-bold mb-0">Achref kaisser</h5>
-                        <small>chaise C</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="rounded shadow overflow-hidden">
-                    <div class="position-relative">
-                        <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 mt-3">
-                        <h5 class="fw-bold mb-0">Adam bde</h5>
-                        <small>chaise D</small>
-                    </div>
-                </div>
-            </div>
+                <?php endforeach ;?>
         </div>
     </div>
 </div>

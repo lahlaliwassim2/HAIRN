@@ -3,8 +3,8 @@
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
-                        <div class="bg-primary rounded p-4">
-                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">bARBER</h1></a>
+                        <div class=" rounded p-4">
+                            <a href=""><h1 class="text-white  text-uppercase mb-3">bARBER</h1></a>
                             
                         </div>
                     </div>

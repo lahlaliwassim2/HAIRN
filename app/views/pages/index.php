@@ -85,24 +85,20 @@
                         <a class="btn btn-primary py-3 px-5 mt-2" href="">Voir plus</a>
                     </div>
                     <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s"
-                                    src="img/about-1.jpg" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
-                                    src="img/about-2.jpg">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s"
-                                    src="img/about-3.jpg">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s"
-                                    src="img/about-4.jpg">
-                            </div>
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="<?php echo URLROOT ?>/img/about-1.jpg" alt="">
                         </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="<?php echo URLROOT ?>/img/about-2.jpg" alt="">">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="<?php echo URLROOT ?>/img/about-3.jpg" alt="">">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="<?php echo URLROOT ?>/img/about-4.jpg" alt="">">
+                        </div>
+                    </div
                     </div>
                 </div>
             </div>
@@ -201,6 +197,8 @@
                     <h1 class="mb-5">Découvrez notre <span class="text-primary text-uppercase">coifeurs</span></h1>
                 </div>
                 <div class="row g-4">
+                    <?php foreach($data as $coiffeur) :
+                       ?>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
@@ -216,71 +214,12 @@
                                 </div>
                             </div>
                             <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">wassim lahlali</h5>
-                                <small>chaise A</small>
+                                <h5 class="fw-bold mb-0"> <?= $coiffeur->nom?></h5>
+                                <small>chaise   <?= $coiffeur->chaise ?> </small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                                <div
-                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Nourdine maher</h5>
-                                <small>chaise B</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                                <div
-                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Achref kaisser</h5>
-                                <small>chaise C</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                                <div
-                                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i
-                                            class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Adam bde</h5>
-                                <small>chaise D</small>
-                            </div>
-                        </div>
-                    </div>
+                   <?php endforeach ;?>
                 </div>
             </div>
         </div>

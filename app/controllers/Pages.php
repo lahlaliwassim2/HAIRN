@@ -2,24 +2,16 @@
   class Pages extends Controller {
     public function __construct(){
       $this->ProductModel= $this->model('ProduitModel');
-
+      $this->CoiffeurModel= $this->model('CoiffeurModel');
+     
     }
     
     public function index(){
-      $data = [
-        'title' => 'TraversyMVC',
-      ];
-     
-      $this->view('pages/index', $data);
+      $coiffeurs = $this->CoiffeurModel->getCoiffeur(); 
+    
+      $this->view('pages/index',$coiffeurs);
     }
 
-    public function about(){
-      $data = [
-        'title' => 'About Us'
-      ];
-
-      $this->view('pages/about', $data);
-    }
     public function contact(){
      
       $this->view('pages/contact');
@@ -28,5 +20,14 @@
       $AllProducts = $this->ProductModel->getAllProducts();
       $this->view('pages/products',$AllProducts);
     }
+
+
+    public function coiffeur(){
+      $coiffeurs = $this->CoiffeurModel->getCoiffeur(); 
+      $this->view('pages/about',$coiffeurs);
+     
+    }
+    public function service(){
+      $this->view('pages/services');
+    }
   }
-   

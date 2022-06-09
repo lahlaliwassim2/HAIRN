@@ -1,3 +1,5 @@
+<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/inc/Navbar-client.php'; ?>
  <!-- Page Header Start -->
  <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
             <div class="container-fluid page-header-inner py-5">
@@ -58,3 +60,6 @@
             </div>
         </div>
         <!-- Service End -->
+
+
+        <?php require APPROOT . '/views/inc/footer.php'; ?>
