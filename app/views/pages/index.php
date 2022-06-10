@@ -131,7 +131,7 @@
                                 <p class="text-body mb-3">Façon de disposer, tailler ou modeler la chevelure afin de lui
                                     apporter une structure à sa convenance.</p>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-primary  py-2 px-4" href="">View all</a>
+                                    <a class="btn btn-primary  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/cheveux">View all</a>
 
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                                 <p class="text-body mb-3">Nous vous ferons une description rapide de chaque style, vous
                                     indiquerons quel trait de .</p>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-primary  py-2 px-4" href="">View all</a>
+                                    <a class="btn btn-primary  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/barbe">View all</a>
 
                                 </div>
                             </div>
@@ -177,7 +177,7 @@
                                 <p class="text-body mb-3">Un soin du visage est un soin du corps destiné à prépar un
                                     pain dermatologique, un lait de toi.</p>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-primary  py-2 px-4" href="">View all</a>
+                                    <a class="btn btn-primary  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/visage">View all</a>
 
                                 </div>
                             </div>

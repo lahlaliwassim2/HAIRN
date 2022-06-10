@@ -27,9 +27,9 @@
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.html" class="nav-item nav-link active">Home</a>
                                 <a href="<?php echo URLROOT ?>/pages/coiffeur" class="nav-item nav-link">About</a>
-                                <a href="<?php echo URLROOT ?>/pages/services" class="nav-item nav-link">Services</a>
+                                <a href="<?php echo URLROOT ?>/pages/service" class="nav-item nav-link">Services</a>
                                 <a href="<?php echo URLROOT ?>/pages/produits" class="nav-item nav-link">Products</a>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                <a href="<?php echo URLROOT ?>/pages/contact" class="nav-item nav-link">Contact</a>
                                 <a href="profil-client.html" class="nav-item nav-link">profil</a>
                             </div>
                             <a href="Rendez-vous.html"

@@ -164,88 +164,38 @@
 
 
 
-.carousel-container {
-	position: relative;
-	overflow: hidden;
-	width: 100vw;
-	height: 100vh;
-}
 
-.text-slide {
-	position: absolute;
-	width: 35%;
-	height: 100%;
-	top: 0;
-	left: 0;
-}
 
-.text-slide > div {
-	height: 100%;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	color: #fff;
-}
 
-.text-slide h1 {
-	font-size: 40px;
-	margin-bottom: 15px;
-}
+  
+  .view{
+    background-color:#dfe6e0;
+    padding:10px;
+    margin:20px;
+  }
+  
+  .card{
+    width:95%;
+    padding:0px;
+    margin-left: 2%;
+  }
+  
+  .card-footer{
+    background-color: #ff772e;
+    font-weight: 700;
+  }
+  
+  .price{
+  color:#ff4517;
+    font-weight: 600;
+  
+  }
 
-.text-slide p {
-	font-size: 20px;
-}
 
-.image-slide {
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 35%;
-	width: 65%;
-}
 
-.image-slide > div {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	height: 100%;
-	width: 100%;
-}
 
-.buttons-action button {
-	position: absolute;
-	left: 35%;
-	top: 50%;
-	z-index: 100;
-	color: #7a9687;
-	background-color: #fff;
-	border: none;
-	font-size: 16px;
-	padding: 10px;
-	cursor: pointer;
-	transition: color 0.3s, background-color 0.3s;
-}
 
-button:hover {
-	color: #37f7a7;
-	background-color: #192218;
-}
 
-button:focus {
-	outline: none;
-}
-
-.buttons-action .button-down {
-	transform: translateX(-100%);
-	border-radius: 3px 0 0 3px;
-}
-
-.buttons-action .button-up {
-	transform: translateY(-100%);
-	border-radius: 0 3px 3px 0;
-}
 
 
 
