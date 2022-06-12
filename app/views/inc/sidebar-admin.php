@@ -18,19 +18,19 @@
             <a href="dashbord.php" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                     class="fa mx-5 fa-tachometer-alt me-2"></i>Dashboard</a>
             <div class="nav-item">
-                <a href="service-dash-admi.php" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
+                <a href="<?php echo URLROOT ?>/pages/adminService" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                         class="fa mx-5 fa-tachometer-alt me-2"></i>Services</a>
             </div>
             <div class="nav-item">
-                <a href="prod-dash.php" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
+                <a href="<?php echo URLROOT ?>/pages/adminprod" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                         class="fa mx-5 fa-tachometer-alt me-2"></i>Produits</a>
             </div>
             <div class="nav-item">
-                <a href="Rendez-vous-dashboard.php" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
+                <a href="<?php echo URLROOT ?>/pages/adminReservations" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                         class="fa mx-5 fa-tachometer-alt me-2"></i>Réservation</a>
             </div>
             <div class="nav-item">
-                <a href="message.php" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
+                <a href="<?php echo URLROOT ?>/pages/adminMessages" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                         class="fa mx-5 fa-tachometer-alt me-2"></i>Messages</a>
             </div>
         </div>

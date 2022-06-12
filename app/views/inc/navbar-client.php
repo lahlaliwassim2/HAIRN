@@ -1,6 +1,6 @@
 
         <!-- Header Start -->
-        <div class="container-fluid bg-dark px-0">
+        <div class="container-fluid logbag px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="<?php echo URLROOT?>/pages/index.php"
