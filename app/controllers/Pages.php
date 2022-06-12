@@ -34,4 +34,16 @@
       $allservices =  $this->servicesModel->getAllServices();
       $this->view('pages/services',$allservices);
     }
+    public function adminprod(){
+      $AllProducts = $this->ProductModel->getAllProducts();
+      $this->view('pages/admin/product-admin',$AllProducts);
+    }
+
+    public function adminService(){
+      $allservices = $this->servicesModel->getAllServices();
+      $this->view('pages/admin/services-admin',$allservices);
+    }
+    public function formLogin(){
+      $this->view('pages/formLogin');
+    }
   }
