@@ -13,15 +13,14 @@
         return $this->db->single();
     }
     
-        public function addProduit($label , $image , $description ,$quantite ,$type){
-            $this->db->query('INSERT INTO `professors`( `label`, `image`, `description`,`quantite`,`type`) VALUES (? ,? ,? ,? ,? )');//:name,:email,:phone,:address
+        public function addProduct($data){
+            $this->db->query('INSERT INTO `produits`( `label`, `image`, `description`,`quantite`,`type`) VALUES (? ,? ,? ,? ,? )');//:name,:email,:phone,:address
             
-            $this->db->bind(1 ,$label);
-            $this->db->bind(2 ,$image);
-            $this->db->bind(3 ,$description);
-            $this->db->bind(4 ,$quantite);
-            $this->db->bind(5 ,$type);
-          
+            $this->db->bind(1 ,$data['nom']);
+            $this->db->bind(2 ,$data['img']);
+            $this->db->bind(3 ,$data['description']);
+            $this->db->bind(4 ,$data['nombre']);
+            $this->db->bind(5 ,$data['rate']);
             $this->db->execute();
             
         }

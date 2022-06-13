@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<form action="<?php echo URLROOT ?>/ProductController/addProduct" method="POST">
 <div class="container">
     
 
@@ -21,7 +22,7 @@
                     </div>
                   </div>
 
-                  <input type="file" class="h-full w-full opacity-0" name="">
+                  <input type="file" class="h-full w-full opacity-0" name="img">
 
                   
 
@@ -38,7 +39,7 @@
                       <div class="col-md-6">
                         <div class="inputs px-4">
                           <span class="text-uppercase">nom de produit</span>
-                          <input type="text" class="form-control">
+                          <input type="text" name="nom" class="form-control">
                         </div>
                       </div>
 
@@ -46,7 +47,7 @@
                       <div class="col-md-6">
                         <div class="inputs px-4">
                           <span class="text-uppercase">description</span>
-                          <input type="text" class="form-control">
+                          <input name="description" type="text" class="form-control">
                         </div>
                       </div>
                       
@@ -57,26 +58,22 @@
                       <div class="col-md-6">
                       <div class="inputs px-4">
                           <span class="text-uppercase">nombre</span>
-                          <input type="text" class="form-control w-25">
+                          <input type="text" name="nombre" class=" form-control w-25">
                         </div>
                       </div>
 
 
-                      <div class="col-md-6">
-                        <div class="inputs px-4">
-                          <span class="text-uppercase">description</span>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
+                   
                       
                     </div>
                
 
                     <div class="row g-2 mt-4">
+           
                       <span class="text-uppercase px-4 name">choisir le type</span>
                       <div class="col-md-3">
                         <div class="px-4">
-                          <label class="radio"> <input type="radio" name="rate" value="Hourly Rate" checked> <span>cheveux</span> </label>
+                          <label class="radio"> <input type="radio" name="rate" value=" cheuveux" checked> <span>cheveux</span> </label>
                           
                         </div>
 
@@ -84,27 +81,29 @@
 
                       <div class="col-md-3">
                      <div class="px-4">
-                        <label class="radio"> <input type="radio" name="rate" value="Yearly Rate"> <span>barbe</span> </label>
+                        <label class="radio"> <input type="radio" name="rate" value="barbe"> <span>barbe</span> </label>
                         </div>
                       </div>
                     
                       <div class="col-md-3">
                      <div class="px-4">
-                        <label class="radio"> <input type="radio" name="rate" value="Yearly Rate"> <span>visage</span> </label>
+                        <label class="radio"> <input type="radio" name="rate" value="visage"> <span>visage</span> </label>
                         </div>
                       </div>
                    
                      <div class="col-md-3">
                      <div class="px-4">
-                        <label class="radio"> <input type="radio" name="rate" value="Yearly Rate"> <span>odeurs</span> </label>
+                        <label class="radio"> <input type="radio" name="rate" value="odeurs"> <span>odeurs</span> </label>
                         </div>
                       </div>
+                   
                     </div>
-               
+                
 
                     <div class="mt-3 px-4 d-flex justify-content-between align-items-center">
-
-                      <button class="btn options btn-primary">Create product</button>                      
+                      
+                      <button class="btn options btn-primary">Create product</button>      
+                     <a href=" <?php echo URLROOT ?>/pages/adminprod"> retour     </a>           
                     </div>
 
                   
@@ -116,3 +115,4 @@
             </div>
              
            </div>
+        </form>

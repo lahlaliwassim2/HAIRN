@@ -138,8 +138,8 @@
                                              <div class="card">
               <div class="card-body">
                 <div class="text-center px-xl-3">
-                  <button class="btn btn-success btn-block" type="button" data-toggle="modal"
-                    data-target="#user-form-modal">New Service</button>
+                 <a href="<?php echo URLROOT ?>/pages/ajouterProduct"> <button class="btn btn-success btn-block" type="button" data-toggle="modal"
+                    data-target="#user-form-modal">New product</button></a>
                 </div>
                
              
