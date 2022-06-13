@@ -324,68 +324,48 @@
     background-image: url(../img/sid.jpg);
 }
 .bg-so{
-    background-image: url(../img/sid.jpg);
-    
+    background-image: url(../img/sid.jpg); 
 }
 .bg-p{
     background-color: #FEA116 
 }
-
 /*Message dashbordpour l admin*/
-
-
 .name {
     color: blue;
   }
-  
   .work {
     font-weight: bold;
     font-size: 15px;
   }
-  
   .about span {
     font-size: 13px;
-  }
-  
+  }  
   .v-profile {
     color: blue;
     cursor: pointer;
-  }
-  
+  } 
   .box {
     -webkit-box-shadow: 13px 12px 5px -10px rgba(196,194,196,0.72);
     -moz-box-shadow: 13px 12px 5px -10px rgba(196,194,196,0.72);
     box-shadow: 13px 12px 5px -10px rgba(196,194,196,0.72);
   }
-  
   .col-md-3 {
     margin-top: 10px;
   }
-
-
-
 /*card reservation*/
 
-
-.card{
-	
+.card{	
 	background-color: #FEA116 ;
 	border-radius : 12px;
 /*	color: #2E7D32;*/
 }
-
-.text{
-  
+.text{  
 	color: #020202;
 }
-
 .images img{
-
 	margin-right: -13px;
 }
-
 .btn i{
-
 	font-size: 13px;
 }
 /* login form */
@@ -395,15 +375,11 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.5s;
-  
-  
+  transition: all 0.5s; 
 }
-
 .card1:hover {
   transform: scale(1.1)
 }
-
 .card2 {
   height: 400px;
   width: 100%;
@@ -412,11 +388,9 @@
   border-radius: 8px;
   transition:all 0.5s;
 }
-
 .card2:hover {
   transform: scale(1.1)
 }
-
 .nom{
   margin-right: 1rem;
 }
@@ -432,28 +406,112 @@
 .logbag{
   background-color: #020202;
 }
-
-
-
-
-
 .text1 .forget {
   color: #767676;
   font-weight: 500
 }
-
-
-
 .text2 .register {
   color: #4f4942;
   font-weight: bold
 }
 /* end form login */
 
-/*sign up*/
+/*form product*/
+.card{
+
+  padding:10px;
+  border: none;
+
+}
+
+.height{
+height: 100vh;
+}
+
+.inputs span{
+font-size: 13px;
+font-weight: 600;
+color: #9e9e9e;
+}
+
+.inputs input{
+height: 48px;
+border: 2px solid #9e9e9e;
+
+}
+
+.inputs input:focus{
+
+border: 2px solid blue;
+box-shadow: none;
+}
 
 
-/*end sign up ù*/
+label.radio {
+cursor: pointer;
+width: 100%;
+/* padding-left: 24px;
+padding-right: 17px;*/
+}
+
+label.radio input {
+position: absolute;
+top: 0;
+left: 0;
+visibility: hidden;
+pointer-events: none
+}
+
+label.radio span {
+padding: 7px 14px;
+border: 2px solid blue;
+display: inline-block;
+color: blue;
+border-radius: 3px;
+text-transform: uppercase;
+width: 100%;
+height: 49px;
+display: flex;
+justify-content: start;
+align-items: center;
+}
+
+label.radio input:checked+span {
+border-color: blue;
+background-color: blue;
+color: #fff;
+width: 100%;
+height: 49px;
+display: flex;
+justify-content: start;
+align-items: center;
+}
+
+.name{
+
+font-size: 13px;
+font-weight: 600;
+color: #9e9e9e;
+margin-left:3px;
+}
+
+
+.options{
+
+text-decoration: none;
+}
+
+.btn-outline-primary {
+color: #0000ff;
+border-color: #0000ff;
+}
+
+.btn-outline-primary:hover {
+background-color: #0000ff;
+border-color: #0000ff;
+}
+
+/*form product ù*/
 
 
 

@@ -44,6 +44,6 @@
       $this->view('pages/admin/services-admin',$allservices);
     }
     public function formLogin(){
-      $this->view('pages/formLogin');
+      $this->view('inc/formPruduct');
     }
   }
