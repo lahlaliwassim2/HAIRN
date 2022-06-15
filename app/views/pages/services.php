@@ -29,8 +29,8 @@
 <!-- partie back End -->
  <?php foreach($data as $services ) :?>
         <!--Card 1-->
-        <div class="col-sm">
-            <div class="card card-cascade card-ecommerce wider shadow mb-5 ">
+        <div class="col-4">
+            <div class="card shadow mb-5 ">
 
                 <!--Card image-->
                 <div class="view view-cascade overlay text-center">

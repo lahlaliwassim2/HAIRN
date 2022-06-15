@@ -13,12 +13,7 @@
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Youcode,Youssoufia,Maroc</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+212 55 93 07 08</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>wlahlali343@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="row gy-5 g-4">

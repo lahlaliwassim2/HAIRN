@@ -13,11 +13,11 @@
         return $this->db->single();
     }
     
-        public function addProduct($data){
+        public function addProduct($data,$img){
             $this->db->query('INSERT INTO `produits`( `label`, `image`, `description`,`quantite`,`type`) VALUES (? ,? ,? ,? ,? )');//:name,:email,:phone,:address
             
             $this->db->bind(1 ,$data['nom']);
-            $this->db->bind(2 ,$data['img']);
+            $this->db->bind(2 ,$img);
             $this->db->bind(3 ,$data['description']);
             $this->db->bind(4 ,$data['nombre']);
             $this->db->bind(5 ,$data['rate']);
@@ -34,15 +34,15 @@
             }
             
         }
-        public function delete($id){
-            $this->db->query('DELETE FROM `produits` WHERE `id_pro` = ?');
+        public function deleteProduct($id){
+            $this->db->query('DELETE FROM `produits` WHERE `id` = ?');
             $this->db->bind(1,$id);
             $this->db->execute();
-            $this->getAllProduits();
-
+           
         }
+
         public function getProduit($id){//for update
-            $this->db->query('SELECT * FROM `produits` WHERE `id_pro` = ?');
+            $this->db->query('SELECT * FROM `produits` WHERE `id` = ?');
             $this->db->bind(1 ,$id );
             return $this->db->single();
         }
@@ -57,6 +57,21 @@
         public function getAllProducts(){
             $this->db->query('SELECT * FROM `produits`');
             return $this->db->resultSet();
+        }
+
+
+        public function update($data,$id){
+
+            $this->db->query("UPDATE produits SET label=?,
+             description= ?, quantite = ? ,type = ? WHERE id = ?");
+
+            $this->db->bind(1 ,$data['nom']);
+            // $this->db->bind(2 ,$img);
+            $this->db->bind(2 ,$data['description']);
+            $this->db->bind(3 ,$data['nombre']);
+            $this->db->bind(4 ,$data['rate']);
+            $this->db->bind(5 ,$id);
+            $this->db->execute();
         }
         
     }

@@ -1,10 +1,11 @@
-!-- Content Start -->
+<?php require APPROOT . './views/inc/header.php'; ?>
+<?php require APPROOT . './views/inc/sidebar-admin.php'; ?>
 <div class="content ">
 
 
 
   <!--Star Header admin -->
-  <header class="d-flex m-2 justify-content-between align-items-center navbar navbar-expand  sticky-top px-4 py-0">
+  <header class="d-flex container m-2 justify-content-between align-items-center navbar navbar-expand  sticky-top px-4 py-0">
     <div class="sidebar-toggler flex-shrink-0 btn">
       <i class="fa fa-bars"></i>
     </div>
@@ -18,7 +19,7 @@
   </header>
   <!--end Header admin -->
   <!-- Page Header Start -->
-  <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+  <div class="container-fluid page-header mb-5 p-0" style="background-image: url(<?php echo URLROOT ?>/img/carousel-1.jpg);">
     <div class="container-fluid page-header-inner py-5">
       <div class="container text-center pb-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown">Mon compte</h1>

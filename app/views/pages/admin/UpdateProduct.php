@@ -1,8 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<form action="<?php echo URLROOT ?>/ProductController/addProduct" method="POST" enctype="multipart/form-data">
+<form action="<?php echo URLROOT ?>/ProductController/updateProduct/<?php echo $data->id ?>" method="POST">
 <div class="container">
-    
-
             <div class="row height d-flex justify-content-center align-items-center">
 
               <div class="col-md-8">
@@ -23,23 +21,17 @@
                   </div>
 
                   <input type="file" class="h-full w-full opacity-0" name="img">
-
-                  
-
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-                    <div class="row mt-1 g-2">
+                  <div class="row mt-1 g-2">
 
                       <div class="col-md-6">
                         <div class="inputs px-4">
                           <span class="text-uppercase">nom de produit</span>
-                          <input type="text" name="nom" class="form-control">
+                          <input value="<?= $data->label?>" type="text" name="nom" class="form-control">
                         </div>
                       </div>
 
@@ -47,7 +39,7 @@
                       <div class="col-md-6">
                         <div class="inputs px-4">
                           <span class="text-uppercase">description</span>
-                          <input name="description" type="text" class="form-control">
+                          <input value="<?= $data->description?>" name="description" type="text" class="form-control">
                         </div>
                       </div>
                       
@@ -58,7 +50,7 @@
                       <div class="col-md-6">
                       <div class="inputs px-4">
                           <span class="text-uppercase">nombre</span>
-                          <input type="text" name="nombre" class=" form-control w-25">
+                          <input value="<?= $data->quantite?>" type="text" name="nombre" class=" form-control w-25">
                         </div>
                       </div>
 
@@ -73,7 +65,7 @@
                       <span class="text-uppercase px-4 name">choisir le type</span>
                       <div class="col-md-3">
                         <div class="px-4">
-                          <label class="radio"> <input type="radio" name="rate" value=" cheuveux" checked> <span>cheveux</span> </label>
+                          <label class="radio"> <input type="radio"  name="rate" value=" cheuveux" checked> <span>cheveux</span> </label>
                           
                         </div>
 
@@ -102,7 +94,7 @@
 
                     <div class="mt-3 px-4 d-flex justify-content-between align-items-center">
                       
-                      <button class="btn options btn-primary">Create product</button>      
+                      <button type="submit" name="submit" class="btn options btn-primary">Update product</button>      
                      <a href=" <?php echo URLROOT ?>/pages/adminprod"> retour     </a>           
                     </div>
 
