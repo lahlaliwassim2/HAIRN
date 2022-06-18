@@ -4,7 +4,7 @@
     <nav class="navbar">
         <div class="d-flex align-items-center ms-4 mb-4">
 
-            <div class="ms-3 p-2 ">
+            <div class="ms-3 p-2 d-flex admn ">
                 <h6 class="mb-0 colo nom-adm">wassim lahlali</h6>
                 <span>Admin</span>
             </div>

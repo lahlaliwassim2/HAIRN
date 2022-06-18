@@ -26,7 +26,7 @@
                 <div class="col-lg-6">
                     <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                     <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">BarberShop</span></h1>
-                    <p class="mb-4">Fondé en 2022, The Barber Shop Group a un engagement passionné envers les soins pour hommes et propose des coupes de cheveux, un coiffage et un rasage pour hommes de haute qualité et d'un bon rapport qualité-prix.</p>
+                    <p class="mb-4">Fondé en 2022, The Barber Shop Group a un engagement passionné envers les soins pour hommes et propose des coupes de cheveux, coiffure  et rasage pour hommes de haute qualité et d'un bon rapport qualité-prix.</p>
                     <div class="row g-3 pb-4">
                         <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                             <div class="border rounded p-1">

@@ -1,7 +1,7 @@
 <?php require APPROOT . './views/inc/header.php'; ?>
 <?php require APPROOT . './views/inc/sidebar-admin.php'; ?>
 <!-- Content Start -->
-<div class="content">
+<div class="content position-relative">
 
 
 
@@ -24,7 +24,7 @@
     <!--end Header admin -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(<?php echo URLROOT ?>/img/carousel-1.jpg" alt="">
+    <div class="container-fluid page-header  mb-5 p-0" style="background-image: url(<?php echo URLROOT ?>/img/carousel-1.jpg" alt="">
         <div class="container-fluid page-header-inner py-5">
             <div class="container text-center pb-5">
                 <h1 class="display-3 text-white mb-3 animated slideInDown">les produits</h1>

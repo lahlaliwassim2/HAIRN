@@ -3,6 +3,7 @@
 
 
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<form action="<?php echo URLROOT; ?>/users/register" method="POST">
 <div class="container mt-5 mb-5">
     <div class="d-flex flex row g-0">
         <div class="col-md-6 mt-3">
@@ -13,36 +14,32 @@
                 </div>
                 <div class="input-field d-flex flex-column mt-3"> 
                    <div class="nomprenom d-flex "> 
-                     <input class="form-control nom" placeholder="Nom"> 
+                     <input value="" class="form-control nom <?php echo (!empty($data['name_err'])) ? 'is-invalid' : ''; ?>"  value="" name="name" placeholder="<?php echo  !empty($data['name_err']) ? $data['name_err'] : 'Name' ; ?>">
+                 
                     
-                     <input class="form-control prenom " placeholder="Prenom"> 
+                     <input value="" class="form-control prenom <?php echo (!empty($data['prenom_err'])) ? 'is-invalid' : ''; ?>"  name="prenom" placeholder="<?php echo  !empty($data['prenom_err']) ? $data['prenom_err'] : ' Prenom' ; ?>"> 
+                   
                    </div><div class="email my-2">
-                   <input class="form-control " placeholder="Email"> 
+                   <input value="" class="form-control <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>"  name="email" placeholder="<?php echo  !empty($data['email_err']) ? $data['email_err'] : ' Email' ; ?>"> 
+                  
                    </div>
                     
                    <div class="nomprenom d-flex "> 
-                     <input class="form-control nom" placeholder="mot de passe "> 
+                     <input value="" class="form-control nom <?php echo  (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" name="password" placeholder=" <?php echo  !empty($data['password_err']) ? $data['password_err'] : ' password' ; ?> "> 
+                  
                     
-                     <input class="form-control prenom " placeholder="confirme mot de passe"> 
+                     <input value="" class="form-control prenom <?php echo (!empty($data['confirm_password_err'])) ? 'is-invalid' : ''; ?>"  name="confirm_password" placeholder="confirme mot de passe"> 
+               
                    </div>
-                   <div class="role d-flex iam">
-                            <label class="col-md-2 col-form-label user_group">I am a</label>
+                   <div class="role d-flex iam d-flex">
+                          
                                             <div class="col-md-10 pt-1">
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                    <label class="form-check-label" for="inlineRadio1">Customer</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                    <label class="form-check-label" for="inlineRadio2">Vendor</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                    <label class="form-check-label" for="inlineRadio2">Both</label>
-                                                </div>
+                                               
+                                             
+                                                
                                              </div>   
                       </div>
-                      <button class="btn btn-dark d-flex justify-content-center align-items-center">Sign up</button>
+                      <button class="btn btn-dark d-flex justify-content-center align-items-center " type="submit " name="submit">Sign up</button>
                     <div class="mt-3 text1"> 
                        <span>you  have an gmail?<span class="register">Register here</span></span>
                     </div>
@@ -59,3 +56,4 @@
         </div>
     </div>
 </div>
+</form>

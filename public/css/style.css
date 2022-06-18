@@ -178,20 +178,8 @@
         margin-left: 0;
     }
   }
-  .sidebar .navbar .navbar-nav .nav-link a {
-    padding: 7px 20px;
-    font-weight: bold;
-    border-left: 3px solid #F3F6F9;
-    width: 250px;
-    
-  }
 
-  .sidebar .navbar .navbar-nav .nav-link i {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-  }
+
 
   .description{
     background-color:#FEF0CC;
@@ -209,21 +197,29 @@
     color: #F5BC29;
   }
 
-  .bgStar{
+  /* .bgStar{
      background-color: rgb(255, 255, 0); 
     color:#FEA116 ;
-  }
+  } */
 .navbar a{
     font-size: 1rem;
     color: #F3F6F9;
 
 }
+.admn{
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
 .dash{
-    border: 1px slateblue solid;
+    border: 1px rgb(205, 146, 90) solid;
 }
 .cards{
     
     height: 175px;
+}
+.colo{
+  color: #dfe6e0;
 }
 /* .bg-che{
     background-image: url(../img/sid.jpg);
