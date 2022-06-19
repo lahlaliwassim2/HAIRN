@@ -7,7 +7,9 @@
     }
     
     public function index(){
+      session_start();
       $coiffeurs = $this->CoiffeurModel->getCoiffeur(); 
+      
       
       $this->view('pages/index',$coiffeurs);
     }
@@ -43,7 +45,10 @@
       $allservices = $this->servicesModel->getAllServices();
       $this->view('pages/admin/services-admin',$allservices);
     }
-
+ public function profil(){
+  session_start();
+   $this->view('pages/profil-client');
+ }
 
 
     // function pour log in 

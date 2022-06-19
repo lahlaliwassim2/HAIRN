@@ -1,5 +1,15 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<?php require APPROOT . '/views/inc/Navbar-client.php'; ?>
+<?php
+if($_SESSION['role'] == 'client'){
+     require APPROOT . '/views/inc/navbar-client.php'; 
+}else{
+     require APPROOT . '/views/inc/navbar-user.php'; 
+}
+?>
+
+
+
+
   <!-- Carousel Start -->
   <div class="container-fluid p-0 mb-5">
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -10,8 +20,13 @@
                             <div class="p-3 para-caros">
                                 <h6 class="section-title text-white text-uppercase mb-3  ">Barber Shop</h6>
                                 <h1 class="display-3 text-white mb-4  ">le salon de réussite dans pfr</h1>
+                                <?php if(isset($_SESSION['id'])) : ?>
                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">PRODUITS</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">SERVICES</a>
+                                <?php else : ?>
+                                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">SIGN UP</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 ">LOG IN </a>
+                                <?php  endif ;?>
                             </div>
                         </div>
                     </div>
@@ -22,9 +37,13 @@
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">BARBER
                                     SHOP</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Découvrire notre salon </h1>
-                                <a href=""
-                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">PRODUITS</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">SERVICES</a>
+                                <?php if(isset($_SESSION['id'])) : ?>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">PRODUITS</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 ">SERVICES</a>
+                                <?php else : ?>
+                                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">SIGN UP</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 ">LOG IN </a>
+                                <?php  endif ;?>
                             </div>
                         </div>
                     </div>
@@ -140,7 +159,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/room-1.jpg" alt="">
+                                <img class="img-fluid" src="img/dêtre-lissée.png" alt="">
                                 <small
                                     class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">+100
                                     exemplest</small>
@@ -160,7 +179,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" >
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/room-1.jpg" alt="">

@@ -2,6 +2,7 @@
   class Users extends Controller {
     public function __construct(){
       $this->userModel = $this->model('User');
+      session_start();
     }
 
     public function register(){
@@ -137,6 +138,7 @@
         $compteUser = $this->userModel->login($data['email']  , $data['password']);
 
         if($compteUser){
+         
           $this->createUserSession($compteUser);
 
           $role = $this->isLoggedIn();
@@ -150,6 +152,7 @@
           //creat session
         }
         else{
+          echo 'mamzyanch0';
           $data['password_err'] = 'password erreur';
          $this->view('pages/formLogin',$data);
         }
@@ -178,16 +181,23 @@
       $_SESSION['name'] = $compteUser->nom;
       $_SESSION['prenom'] = $compteUser->prenom;
       $_SESSION['role'] = $compteUser->role;
-      var_dump($_SESSION['id']);
+      $_SESSION['creat_at'] = $compteUser->creat_at;
+      
     }
 
     public function isLoggedIn(){
-      if($_SESSION['role'] == "admin"){
+      if(isset($_SESSION['ID'])){
         return true;
       } else {
         return false;
       }
     }
-
+   public function clientSession(){
+    if($_SESSION['role'] == "client"){
+      return true ; 
+    }else{
+      return false ;
+    }
+   }
     
   }
