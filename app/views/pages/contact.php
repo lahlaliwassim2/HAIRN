@@ -14,24 +14,24 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center">
-                    <h6 class="section-title text-center text-primary text-uppercase">Contacter nous
+                    <h6 class="section-title text-center text-info text-uppercase">Contacter nous
                     </h6>
-                    <h1 class="mb-5"><span class="text-primary text-uppercase">Message</span> pour nous</h1>
+                    <h1 class="mb-5"><span class="text-info text-uppercase">Message</span> pour nous</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="row gy-4">
                             <div class="col-md-4">
-                                <h6 class="section-title text-start text-primary text-uppercase">admin</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>wlahlali@gmail.com</p>
+                                <h6 class="section-title text-start text-info text-uppercase">admin</h6>
+                                <p><i class="fa fa-envelope-open text-info me-2"></i>wlahlali@gmail.com</p>
                             </div>
                             <div class="col-md-4">
-                                <h6 class="section-title text-start text-primary text-uppercase">chef d'equipe</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
+                                <h6 class="section-title text-start text-info text-uppercase">chef d'equipe</h6>
+                                <p><i class="fa fa-envelope-open text-info me-2"></i>info@example.com</p>
                             </div>
                             <div class="col-md-4">
-                                <h6 class="section-title text-start text-primary text-uppercase">Numero</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>+212 55 93 07 08</p>
+                                <h6 class="section-title text-start text-info text-uppercase">Numero</h6>
+                                <p><i class="fa fa-envelope-open text-info me-2"></i>+212 55 93 07 08</p>
                             </div>
                         </div>
                     </div>
@@ -57,23 +57,23 @@
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
+                            <form action="<?php echo URLROOT ?>/Message/SendMessage" method="POST">
                                 <div class="row g-3">
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <input type="text" class="form-control" name="sujet" id="subject" placeholder="Subject">
                                             <label for="subject">Sujet</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here"
+                                            <textarea name="content" class="form-control" placeholder="Leave a message here"
                                                 id="message" style="height: 150px"></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Envoyer</button>
+                                        <button class="btn btn-info w-100 py-3" type="submit">Envoyer</button>
                                     </div>
                                 </div>
                             </form>
