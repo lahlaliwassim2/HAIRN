@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<form action="<?php echo URLROOT ?>/ProductController/addProduct" method="POST" enctype="multipart/form-data">
+<form action="<?php echo URLROOT ?>/ServiceController/addService" method="POST" enctype="multipart/form-data">
 <div class="container">
     
 
@@ -15,7 +15,7 @@
                 <div class="relative border-dotted h-48 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center">
 
                   <div class="absolute">
-                    <h1 class=" ">Ajouter un produit</h1>
+                    <h1 class=" ">Ajouter un service</h1>
                     <div class="flex flex-col items-center">
                       <i class="fa fa-folder-open fa-4x text-blue-700"></i>
                     <span class="block text-gray-400  font-normal">ajouter une photo </span>
@@ -38,7 +38,7 @@
 
                       <div class="col-md-6">
                         <div class="inputs px-4">
-                          <span class="text-uppercase">nom de produit</span>
+                          <span class="text-uppercase">nom de service</span>
                           <input type="text" name="nom" class="form-control">
                         </div>
                       </div>
@@ -57,7 +57,7 @@
 
                       <div class="col-md-6">
                       <div class="inputs px-4">
-                          <span class="text-uppercase">nombre</span>
+                          <span class="text-uppercase">prix</span>
                           <input type="text" name="nombre" class=" form-control w-25">
                         </div>
                       </div>
@@ -91,19 +91,13 @@
                         </div>
                       </div>
                    
-                     <div class="col-md-3">
-                     <div class="px-4">
-                        <label class="radio"> <input type="radio" name="rate" value="odeurs"> <span>odeurs</span> </label>
-                        </div>
-                      </div>
-                   
-                    </div>
+                 
                 
 
                     <div class="mt-3 px-4 d-flex justify-content-between align-items-center">
                       
                       <button class="btn options btn-info">Create product</button>      
-                     <a href=" <?php echo URLROOT ?>/pages/adminprod"> retour     </a>           
+                     <a href=" <?php echo URLROOT ?>/pages/adminService"> retour  </a>           
                     </div>
 
                   

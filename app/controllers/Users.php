@@ -199,5 +199,13 @@
       return false ;
     }
    }
-    
+    public function logout(){
+      session_start();
+      unset($_SESSION['id']);
+      unset($_SESSION['name']);
+      unset($_SESSION['prenom']);
+      unset($_SESSION['role']);
+      session_destroy();
+      redirect('pages/formLogin');
+    }
   }

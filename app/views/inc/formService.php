@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<form action="<?php echo URLROOT ?>/ServicesController/addService" method="POST">
+<form action="<?php echo URLROOT ?>/ServicesController/addService" method="POST" enctype="multipart/form-data">
     <div class="container">
 
 
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="mt-3 px-4 d-flex justify-content-between align-items-center">
-                        <button class="btn options btn-primary">Create servce</button>
+                        <button class="btn options btn-info">Create servce</button>
                         <a href=" <?php echo URLROOT ?>/pages/adminService"> retour </a>
                     </div>
                 </div>

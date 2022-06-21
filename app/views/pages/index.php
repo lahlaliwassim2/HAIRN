@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<?php
-if($_SESSION['role'] == 'client'){
+<?php 
+if($_SESSION['role'] == 'client'){ 
      require APPROOT . '/views/inc/navbar-client.php'; 
 }else{
      require APPROOT . '/views/inc/navbar-user.php'; 
@@ -15,33 +15,33 @@ if($_SESSION['role'] == 'client'){
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                        <img class="w-100" src="<?php echo URLROOT ?>/img/carousel-1.jpg" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3 para-caros">
                                 <h6 class="section-title text-white text-uppercase mb-3  ">Barber Shop</h6>
                                 <h1 class="display-3 text-white mb-4  ">le salon de réussite dans pfr</h1>
-                                <?php if(isset($_SESSION['id'])) : ?>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">PRODUITS</a>
+                                <?php if(($_SESSION['role']=='client')) : ?>
+                                <a href="" class="btn btn-info py-md-3 px-md-5 me-3  ">PRODUITS</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">SERVICES</a>
                                 <?php else : ?>
-                                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">SIGN UP</a>
+                                    <a href="" class="btn btn-info py-md-3 px-md-5 me-3  ">SIGN UP</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">LOG IN </a>
                                 <?php  endif ;?>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                        <img class="w-100" src="<?php echo URLROOT ?>/img/carousel-2.jpg" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">BARBER
                                     SHOP</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Découvrire notre salon </h1>
-                                <?php if(isset($_SESSION['id'])) : ?>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">PRODUITS</a>
+                                <?php if($_SESSION['role'] == 'client') : ?>
+                                <a href="" class="btn btn-info py-md-3 px-md-5 me-3  ">PRODUITS</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">SERVICES</a>
                                 <?php else : ?>
-                                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3  ">SIGN UP</a>
+                                    <a href="" class="btn btn-info py-md-3 px-md-5 me-3  ">SIGN UP</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">LOG IN </a>
                                 <?php  endif ;?>
                             </div>
@@ -64,11 +64,11 @@ if($_SESSION['role'] == 'client'){
 
         <!-- About Start -->
         <div class="container-xxl py-5">
-            <div class="container">
+            <div>
                 <div class="row g-5  align-items-center">
                     <div class="col-lg-6">
-                        <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">BarberShop</span></h1>
+                        <h6 class="section-title text-start text- text-uppercase">About Us</h6>
+                        <h1 class="mb-4">Welcome to <span class="text- text-uppercase">BarberShop</span></h1>
                         <p class="mb-4">Fondé en 2022, The Barber Shop Group a un engagement passionné envers les soins
                             pour hommes et propose des coupes de cheveux, un coiffage et un rasage pour hommes de haute
                             qualité et d'un bon rapport qualité-prix.</p>
@@ -76,7 +76,7 @@ if($_SESSION['role'] == 'client'){
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
-                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
+                                        <i class="fa fa-hotel fa-2x text-info mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up">1234</h2>
                                         <p class="mb-0">coupes</p>
                                     </div>
@@ -85,7 +85,7 @@ if($_SESSION['role'] == 'client'){
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
-                                        <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
+                                        <i class="fa fa-users-cog fa-2x text-info mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up">1234</h2>
                                         <p class="mb-0">coiffeurs</p>
                                     </div>
@@ -94,28 +94,28 @@ if($_SESSION['role'] == 'client'){
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
-                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                        <i class="fa fa-users fa-2x text-info mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up">1234</h2>
                                         <p class="mb-0">BARBERS</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Voir plus</a>
+                        <a class="btn btn-info py-3 px-5 mt-2" href="<?php echo URLROOT ?>/pages/coiffeur">Voir plus</a>
                     </div>
                     <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="<?php echo URLROOT ?>/img/about-1.jpg" alt="">
+                            <img class="img-fluid rounded col-12 w-75 wow zoomIn" data-wow-delay="0.1s" src="<?php echo URLROOT ?>/img/about-1.jpg" alt="">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="<?php echo URLROOT ?>/img/about-2.jpg" alt="">">
+                            <img class="img-fluid rounded col-12 w-100 wow zoomIn" data-wow-delay="0.3s" src="<?php echo URLROOT ?>/img/about-2.jpg" alt="">
                         </div>
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="<?php echo URLROOT ?>/img/about-3.jpg" alt="">">
+                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="<?php echo URLROOT ?>/img/about-3.jpg" alt="">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="<?php echo URLROOT ?>/img/about-4.jpg" alt="">">
+                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="<?php echo URLROOT ?>/img/about-4.jpg" alt="">
                         </div>
                     </div
                     </div>
@@ -129,16 +129,16 @@ if($_SESSION['role'] == 'client'){
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp">
-                    <h6 class="section-title text-center text-primary text-uppercase">NOTRE Services</h6>
-                    <h1 class="mb-5">Découvrez notre<span class="text-primary text-uppercase"> service </span></h1>
+                    <h6 class="section-title text-center text-info text-uppercase">NOTRE Services</h6>
+                    <h1 class="mb-5">Découvrez notre<span class="text-info text-uppercase"> service </span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/room-1.jpg" alt="">
+                                <img class="img-fluid" style="height: 266px;" src="<?php echo URLROOT ?>/img/room-1.jpg" alt="">
                                 <small
-                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">+100
+                                    class="position-absolute start-0 top-100 translate-middle-y bg-info text-white rounded py-1 px-3 ms-4">+100
                                     exemplest</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -150,7 +150,7 @@ if($_SESSION['role'] == 'client'){
                                 <p class="text-body mb-3">Façon de disposer, tailler ou modeler la chevelure afin de lui
                                     apporter une structure à sa convenance.</p>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-primary  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/cheveux">View all</a>
+                                    <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/cheveux">View all</a>
 
                                 </div>
                             </div>
@@ -159,9 +159,9 @@ if($_SESSION['role'] == 'client'){
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/dêtre-lissée.png" alt="">
+                                <img class="img-fluid" style="height: 266px;" src="<?php echo URLROOT ?>/img/room-2.jpg" alt="">
                                 <small
-                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">+100
+                                    class="position-absolute start-0 top-100 translate-middle-y bg-info text-white rounded py-1 px-3 ms-4">+100
                                     exemplest</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -173,7 +173,7 @@ if($_SESSION['role'] == 'client'){
                                 <p class="text-body mb-3">Nous vous ferons une description rapide de chaque style, vous
                                     indiquerons quel trait de .</p>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-primary  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/barbe">View all</a>
+                                    <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/barbe">View all</a>
 
                                 </div>
                             </div>
@@ -182,9 +182,9 @@ if($_SESSION['role'] == 'client'){
                     <div class="col-lg-4 col-md-6 wow fadeInUp" >
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/room-1.jpg" alt="">
+                                <img class="img-fluid"src="<?php echo URLROOT ?>/img/room-3.jpg" alt="">
                                 <small
-                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">+100
+                                    class="position-absolute start-0 top-100 translate-middle-y bg-info text-white rounded py-1 px-3 ms-4">+100
                                     exemplest</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -196,7 +196,7 @@ if($_SESSION['role'] == 'client'){
                                 <p class="text-body mb-3">Un soin du visage est un soin du corps destiné à prépar un
                                     pain dermatologique, un lait de toi.</p>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-primary  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/visage">View all</a>
+                                    <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/visage">View all</a>
 
                                 </div>
                             </div>
@@ -212,11 +212,11 @@ if($_SESSION['role'] == 'client'){
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">notre coiffeurs</h6>
-                    <h1 class="mb-5">Découvrez notre <span class="text-primary text-uppercase">coifeurs</span></h1>
+                    <h6 class="section-title text-center text-info text-uppercase">notre coiffeurs</h6>
+                    <h1 class="mb-5">Découvrez notre <span class="text-info text-uppercase">coifeurs</span></h1>
                 </div>
                 <div class="row g-4">
-                    <?php foreach($data as $coiffeur) :
+                    <?php foreach($data['coiffeur'] as $coiffeur) :
                        ?>
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
@@ -240,8 +240,8 @@ if($_SESSION['role'] == 'client'){
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">notre produits</h6>
-                    <h1 class="mb-5">Découvrez notre <span class="text-primary text-uppercase">Produits</span></h1>
+                    <h6 class="section-title text-center text-info text-uppercase">notre produits</h6>
+                    <h1 class="mb-5">Découvrez notre <span class="text-info text-uppercase">Produits</span></h1>
                 </div>
                 <div class="container-xxl py-5">
                     <div class="container">
@@ -257,7 +257,7 @@ if($_SESSION['role'] == 'client'){
                                         </div>
                                         <div class="text-center p-4 mt-3">
                                             <h5 class="fw-bold mb-0">visage</h5>
-                                            <small>Designation</small>
+                                            <small><?php echo $data['visage']; ?></small>
                                         </div>
                                     </div>
                                 </a>
@@ -271,7 +271,7 @@ if($_SESSION['role'] == 'client'){
                                         </div>
                                         <div class="text-center p-4 mt-3">
                                             <h5 class="fw-bold mb-0">Barbe</h5>
-                                            <small>Designation</small>
+                                            <small><?php echo $data['barbe']; ?></small>
                                         </div>
                                     </div>
                                 </a>
@@ -285,7 +285,7 @@ if($_SESSION['role'] == 'client'){
                                         </div>
                                         <div class="text-center p-4 mt-3">
                                             <h5 class="fw-bold mb-0">cheveux</h5>
-                                            <small>Designation</small>
+                                            <small><?php echo $data['cheveux']; ?></small>
                                         </div>
                                     </div>
                                 </a>
@@ -299,7 +299,7 @@ if($_SESSION['role'] == 'client'){
                                         </div>
                                         <div class="text-center p-4 mt-3">
                                             <h5 class="fw-bold mb-0">Odeurs</h5>
-                                            <small>Designation</small>
+                                            <small><?php echo $data['odeurs']; ?></small>
                                         </div>
                                     </div>
                                 </a>
@@ -313,8 +313,8 @@ if($_SESSION['role'] == 'client'){
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center  ">
-                    <h6 class="section-title text-center text-primary text-uppercase">Rendez-vous</h6>
-                    <h1 class="mb-5">prendre votre <span class="text-primary text-uppercase">Rendez-vous</span></h1>
+                    <h6 class="section-title text-center text-info text-uppercase">Rendez-vous</h6>
+                    <h1 class="mb-5">prendre votre <span class="text-info text-uppercase">Rendez-vous</span></h1>
                 </div>
                 <div class="row g-5">
                     <div class="col-lg-6 col-md-4 maps">
@@ -370,7 +370,7 @@ if($_SESSION['role'] == 'client'){
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Rendez-vous</button>
+                                        <button class="btn btn-info w-100 py-3" type="submit">Rendez-vous</button>
                                     </div>
                                 </div>
                             </form>
@@ -380,10 +380,10 @@ if($_SESSION['role'] == 'client'){
             </div>
         </div>
         <!-- rendez vous End -->
+</div>
 
 
 
-
-
+</body>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>

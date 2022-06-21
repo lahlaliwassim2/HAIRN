@@ -94,7 +94,7 @@
 
                     <div class="mt-3 px-4 d-flex justify-content-between align-items-center">
                       
-                      <button type="submit" name="submit" class="btn options btn-primary">Update product</button>      
+                      <button type="submit" name="submit" class="btn options btn-info">Update product</button>      
                      <a href=" <?php echo URLROOT ?>/pages/adminprod"> retour     </a>           
                     </div>
 

@@ -11,3 +11,5 @@
   define('URLROOT', 'http://localhost/barber-fr-mvc');
   // Site Name
   define('SITENAME', 'BARBER SHOP');
+
+  session_start();

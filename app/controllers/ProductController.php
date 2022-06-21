@@ -1,6 +1,6 @@
  <?php 
  class ProductController extends Controller{
-    public function __construct()
+public function __construct()
     {
         $this->ProductModel= $this->model('ProduitModel');
     }
@@ -73,35 +73,29 @@ public function addProduct(){
 
           }
     }
-
-
-
     public function sherchProduct($type){
       $product =   $this->ProductModel-> getProduct($type);
       $this->view('/pages/admin/product-admin',$product);
-
     }
-
-
-
     public function getProduit($id){
         $product = $this->ProductModel->getProduit($id);
         $this->view('pages/admin/UpdateProduct',$product);
     }
-
     public function updateProduct($id){
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
             $this->view('pages/admin/product-admin');
          }
          else if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $data = $_POST;
-            // $page = 'update';
-            // $idCat = $this->CatModel->getIdCatSelect($_POST['job']);
-            // $imgName = $this->checkImg($page,$id);
+            $data = $_POST;           
             $this->ProductModel->update($data,$id);
             redirect('admin/product-admin');
         } 
     }
+    public function rowCount($type){
+      $rows =   $this->ProductModel->rowCount($type);
+      return $rows;
+    }
+    
 
 
     

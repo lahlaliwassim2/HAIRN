@@ -20,54 +20,54 @@
 
 
 <!--For Page-->
-<div class="page">
+
 
     <!--For Row containing all card-->
     <div class="row">
 
 
-<!-- partie back End -->
- <?php foreach($data as $services ) :?>
-        <!--Card 1-->
-        <div class="col-4">
-            <div class="card shadow mb-5 ">
+        <!-- partie back End -->
+        <?php foreach ($data as $services) : ?>
+            <!--Card 1-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card shadow mb-5 ">
 
-                <!--Card image-->
-                <div class="view view-cascade overlay text-center">
-                    <img class="card-img-top" src="https://i.imgur.com/9VZGPJF.jpg" alt="">
-                    <a>
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-
-                <!--Card Body-->
-                <div class="card-body card-body-cascade text-center">
-
-                    <!--Card Title-->
-                    <h4 class="card-title"><strong><a href='<?php echo URLROOT ?>/ServicesController/getService/<?php echo $services->type; ?>'><?php echo $services->type; ?> </a></strong></h4>
-
-                    <!-- Card Description-->
-                    <h3 class="card-text"><?= $services->label?>
-                    </h3>
-
-
-                    <p class="price"><?= $services->pris?>dh</p>
-
-                    <!-- Card Rating-->
-
-
-
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <p>ADD TO CART</p>
+                    <!--Card image-->
+                    <div class="view view-cascade overlay text-center">
+                        <img class="card-img-top" src="<?php echo URLROOT ?>/upload/<?php echo $services->image ?>" alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
                     </div>
 
 
+                    <!--Card Body-->
+                    <div class="card-body card-body-cascade text-center">
+
+                        <!--Card Title-->
+                        <h4 class="card-title"><strong><a href='<?php echo URLROOT ?>/ServicesController/getService/<?php echo $services->type; ?>'><?php echo $services->type; ?> </a></strong></h4>
+
+                        <!-- Card Description-->
+                        <h3 class="card-text"><?= $services->label ?>
+                        </h3>
+
+
+                        <p class="price"><?= $services->pris ?>dh</p>
+
+                        <!-- Card Rating-->
+
+
+
+                        <!--Card footer-->
+                        <div class="card-footer">
+                            <p>ADD TO CART</p>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
-        </div>
-<?php endforeach ;?>
+        <?php endforeach; ?>
 
 
 
@@ -77,7 +77,7 @@
 
 
     </div>
-</div>
+
 <!-- Service End -->
 
 

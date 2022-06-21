@@ -6,12 +6,7 @@
         $this->db = new Database();
     }
     
-    public function getProduits(){
-        
-        $this->db->query("SELECT * FROM tests");
-
-        return $this->db->single();
-    }
+  
     
         public function addProduct($data,$img){
             $this->db->query('INSERT INTO `produits`( `label`, `image`, `description`,`quantite`,`type`) VALUES (? ,? ,? ,? ,? )');//:name,:email,:phone,:address
@@ -72,6 +67,13 @@
             $this->db->bind(4 ,$data['rate']);
             $this->db->bind(5 ,$id);
             $this->db->execute();
+        }
+
+        public function rowCount($type){
+            $this->db->query('SELECT * FROM `produits` WHERE `type` = ?');
+            $this->db->bind(1 ,$type );
+            $this->db->execute();          
+            return  $this->db->rowCount();  
         }
         
     }

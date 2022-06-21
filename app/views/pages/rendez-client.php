@@ -17,8 +17,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center  ">
-                    <h6 class="section-title text-center text-primary text-uppercase">Rendez-vous</h6>
-                    <h1 class="mb-5">prendre votre <span class="text-primary text-uppercase">Rendez-vous</span></h1>
+                    <h6 class="section-title text-center text-info text-uppercase">Rendez-vous</h6>
+                    <h1 class="mb-5">prendre votre <span class="text-info text-uppercase">Rendez-vous</span></h1>
                 </div>
                 <div class="row g-5">
                     <div class="col-md-6">
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Rendez-vous</button>
+                                        <button class="btn btn-info w-100 py-3" type="submit">Rendez-vous</button>
                                     </div>
                                 </div>
                             </form>

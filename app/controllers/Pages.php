@@ -7,15 +7,28 @@
     }
     
     public function index(){
-      session_start();
       $coiffeurs = $this->CoiffeurModel->getCoiffeur(); 
+      $visage =   $this->ProductModel->rowCount("visage");
+      $barbe =   $this->ProductModel->rowCount("barbe");
+      $odeurs =   $this->ProductModel->rowCount("odeurs");
+      $cheveux =   $this->ProductModel->rowCount("cheveux");
+
+      $data = [
+        'coiffeur' => $coiffeurs,
+        'visage' => $visage,
+        'barbe' => $barbe,
+        'odeurs' => $odeurs,
+        'cheveux' => $cheveux,
+      ];
+
+     
+     
       
-      
-      $this->view('pages/index',$coiffeurs);
+      $this->view('pages/index',$data);
     }
 
     public function contact(){
-     
+    
       $this->view('pages/contact');
     }
 
@@ -36,9 +49,13 @@
     }
 
     public function adminprod(){
+      if($_SESSION['role'] == 'admin'){
       $AllProducts = $this->ProductModel->getAllProducts();
       $this->view('pages/admin/product-admin',$AllProducts);
+    }else{
+      redirect('pages/formLogin');
     }
+  }
 
     //function pour es services 
     public function adminService(){
@@ -46,7 +63,6 @@
       $this->view('pages/admin/services-admin',$allservices);
     }
  public function profil(){
-  session_start();
    $this->view('pages/profil-client');
  }
 
@@ -65,6 +81,7 @@
 
       $this->view('inc/formPruduct');
     }
+   
 
 
     public function ajouterService(){

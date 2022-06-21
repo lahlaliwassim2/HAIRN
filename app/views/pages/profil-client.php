@@ -1,8 +1,10 @@
     <!--partien profil de client-->
     <?php require APPROOT . '/views/inc/header.php'; ?>
     <?php if (isset($_SESSION['id'])) {
+        
+          require APPROOT . '/views/inc/navbar-client.php';
     }
-    require APPROOT . '/views/inc/navbar-client.php'; ?>
+   ?>
 
 
     <!--profil client-->
@@ -45,8 +47,8 @@
                                         <h6 class="text-muted f-w-400"></h6>
                                     </div>
                                     <div class="btn-group row" role="group" aria-label="Button group with nested dropdown">
-                                        <button type="button" class="btn col-5 m-1 btn-secondary">envoyer un message </button>
-                                        <button type="button" class="btn col-5 m-1 btn-secondary">deconexion</button>
+                                      <a class="col-6" href="">  <button type="button" class="btn  m-1 btn-secondary">envoyer un message </button></a>
+                                    <a href="<?php echo URLROOT?>/users/logout" class="col-6">   <button type="button" class="btn  m-1 btn-secondary">deconexion</button></a> 
 
                                     </div>
                                 </div>
@@ -69,32 +71,35 @@
                 <table class="table table-responsive table-borderless">
                     <thead>
 
-                        <th>Service</th>
-                        <th>Prix</th>
-                        <th>date</th>
+                        <th>sujet</th>
+                        <th>content</th>
+                        <th>options</th>
+                       
 
                     </thead>
+                    <?php foreach($data as $message) : ?>
                     <tbody>
                         <tr class="align-middle alert border-bottom" role="alert">
                             <td>
                                 <div>
-                                    <p class="m-0 fw-bold">Sneakers Shoes 2020 For Men</p>
-                                    <p class="m-0 text-muted">Fugiat Voluptates quasi nemo,ipsa perferencis</p>
+                                    <h5 class="m-0 fw-bold">Sneakers Shoes 2020 For Men</h5>
+                                   
                                 </div>
                             </td>
                             <td class="text-center">
-                                <img class="pic" src="https://www.freepnglogos.com/uploads/shoes-png/dance-shoes-png-transparent-dance-shoes-images-5.png" alt="">
+                               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit omnis eaque in distinctio quibusdam quisquam, adipisci natus modi reprehenderit. Recusandae accusamus illum molestias ea deb.</p>
                             </td>
                             <td>
                                 <div>
 
-                                    <p class="m-0 text-muted">Fugiat Voluptates quasi nemo,ipsa perferencis</p>
+                                <a href="<?php echo URLROOT ?>/message/deleteMessage/<?php echo $products->id ?>">   <button class="btn text-info" type="button">delete</button> </a>
                                 </div>
                             </td>
 
 
 
                     </tbody>
+                    <?php endforeach ;?>
                 </table>
             </div>
         </div>

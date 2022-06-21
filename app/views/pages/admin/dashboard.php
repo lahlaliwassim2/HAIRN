@@ -42,7 +42,7 @@
                   <p class="text-secondary mb-1">admin</p>
                   <p class="text-muted font-size-sm"></p>
 
-                  <button class="btn btn-outline-primary">Mes Messages</button>
+                  <button class="btn btn-outline-info">Mes Messages</button>
                 </div>
               </div>
             </div>

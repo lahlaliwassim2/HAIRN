@@ -15,13 +15,14 @@
             <div class="d-flex ms-4">
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch">
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button">
-                        <!-- <i class="fas fa-search"></i> Font Awesome fontawesome.com --></button>
+                    <button class="btn btn-info" id="btnNavbarSearch" type="button"></button>
+                      
+                    
                 </div>
             </div>
         </div>
     </header>
-    <!--end Header admin -->
+
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header  mb-5 p-0" style="background-image: url(<?php echo URLROOT ?>/img/carousel-1.jpg" alt="">
@@ -43,8 +44,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp">
-                    <h6 class="section-title text-center text-primary text-uppercase">Produits</h6>
-                    <h1 class="mb-5">Gerer les<span class="text-primary text-uppercase"> Produits </span></h1>
+                    <h6 class="section-title text-center text-info text-uppercase">Produits</h6>
+                    <h1 class="mb-5">Gerer les<span class="text-info text-uppercase"> Produits </span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="row g-4">
@@ -58,7 +59,7 @@
                                     </div>
                                     <div class="text-center p-4 mt-3">
                                         <h5 class="fw-bold mb-0">visage</h5>
-                                        <small>Designation</small>
+                                        <small><?= $rows ?></small>
                                     </div>
                                 </div>
                             </a>
@@ -109,7 +110,7 @@
                 </div>
             </div>
 
-            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+           
             <div class="container">
                 <div class="row flex-lg-nowrap">
 
