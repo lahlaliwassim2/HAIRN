@@ -80,12 +80,8 @@
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="rounded shadow overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid" src="<?php echo URLROOT ?>/img/team-1.jpg" alt="">
-                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                            <a class="btn btn-square btn-info mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-info mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-info mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
+                        <img class="img-fluid"  src="<?php echo URLROOT ?>/upload/<?php echo $coiffeur->image ?>"  alt="">
+                      
                     </div>
                     <div class="text-center p-4 mt-3">
                         <h5 class="fw-bold mb-0"><?= $coiffeur->nom?></h5>

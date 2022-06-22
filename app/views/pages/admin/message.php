@@ -35,9 +35,9 @@
          <div class="card-body text-center">
            
             <img src="https://i.imgur.com/uIgDDDd.jpg" class="rounded-circle" width="200" height="200"> 
-            <h5 class="card-title mt-2 mb-1"><?= $value->sujet?></h5>
-            <span class="fs-2 mb-3 font-weight-bold"></span>
-            <p class="mb-3 mt-3">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+            <h5 class="card-title mt-2 mb-1"><?= $value->nom?></h5>
+            <span class="fs-2 mb-3 font-weight-bold"><?= $value->sujet?></span>
+            <p class="mb-3 mt-3"><?= $value->content?></p>
            
           
 

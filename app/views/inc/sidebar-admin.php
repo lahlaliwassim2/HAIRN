@@ -24,7 +24,7 @@
                         class="fa mx-5 fa-tachometer-alt me-2"></i>Produits</a>
             </div>
             <div class="nav-item">
-                <a href="<?php echo URLROOT ?>/pages/adminCoiffeurs" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
+                <a href="<?php echo URLROOT ?>/pages/adminBarbers" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                         class="fa mx-5 fa-tachometer-alt me-2"></i>les coiffeurs</a>
             </div>
             <div class="nav-item">
@@ -38,7 +38,7 @@
             
         </div>
         <div class="nav-item">
-                <a href="<?php echo URLROOT ?>/pages/adminMessages"  class="nav-item dash nav-link mt-2  active" style="backdrop-filter: blur(14px);"><i
+                <a href="<?php echo URLROOT?>/users/logout"  class="nav-item dash nav-link mt-2  active" style="backdrop-filter: blur(14px);"><i
                         class="fa mx-5 fa-tachometer-alt me-2"></i>log out </a>
             </div>
     </nav>

@@ -207,7 +207,7 @@ if($_SESSION['role'] == 'client'){
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                <img class="img-fluid"  src="<?php echo URLROOT ?>/upload/<?php echo $coiffeur->image ?>"  alt="">
                         
                             </div>
                             <div class="text-center p-4 mt-3">

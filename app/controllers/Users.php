@@ -2,7 +2,7 @@
   class Users extends Controller {
     public function __construct(){
       $this->userModel = $this->model('User');
-      session_start();
+   
     }
 
     public function register(){
@@ -64,7 +64,7 @@
         if(empty($data['email_err']) && empty($data['name_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])){
           // Validated
          //hash password 
-         $data['password'] = password_hash($data['password'],PASSWORD_DEFAULT);
+         $data['password'] = $data['password'];
           // regster User
           if($this->userModel->register($data)){
             redirect('pages/formLogin');
@@ -144,7 +144,8 @@
           $role = $this->isLoggedIn();
 
           if($role){
-          redirect('pages/about');
+            
+          redirect("pages/about");
           }
           else{
             redirect("pages/index");

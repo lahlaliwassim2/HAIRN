@@ -27,6 +27,10 @@
       
       $this->view('pages/index',$data);
     }
+    public function couifAdmn(){
+      $this->view('pages/admin/coiffeurAdmin');
+    }
+
 
     public function contact(){
     
@@ -85,6 +89,9 @@
 
       $this->view('inc/formPruduct');
     }
+    public function ajouterCoiffeur(){
+      $this->view('pages/admin/formCoiffeur');
+    }
    
 
 
@@ -94,7 +101,7 @@
     }
     public function adminBarbers(){
 
-      $this->view('pages/admin/BarberAdmin');
+      $this->view('pages/admin/coiffeurAdmin');
       
     }
     //function pour le crud de barber 
