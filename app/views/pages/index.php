@@ -104,21 +104,7 @@ if($_SESSION['role'] == 'client'){
                         <a class="btn btn-info py-3 px-5 mt-2" href="<?php echo URLROOT ?>/pages/coiffeur">Voir plus</a>
                     </div>
                     <div class="col-lg-6">
-                    <div class="row g-3">
-                        <div class="col-6 text-end">
-                            <img class="img-fluid rounded col-12 w-75 wow zoomIn" data-wow-delay="0.1s" src="<?php echo URLROOT ?>/img/about-1.jpg" alt="">
-                        </div>
-                        <div class="col-6 text-start">
-                            <img class="img-fluid rounded col-12 w-100 wow zoomIn" data-wow-delay="0.3s" src="<?php echo URLROOT ?>/img/about-2.jpg" alt="">
-                        </div>
-                        <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="<?php echo URLROOT ?>/img/about-3.jpg" alt="">
-                        </div>
-                        <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="<?php echo URLROOT ?>/img/about-4.jpg" alt="">
-                        </div>
-                    </div
-                    </div>
+                    <img style="width : 100%" src="<?php echo URLROOT ?>/img/team-1.jpg" alt="">
                 </div>
             </div>
         </div>

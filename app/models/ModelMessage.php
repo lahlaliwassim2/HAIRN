@@ -22,6 +22,18 @@
         $this->db->bind(1,$id);
         $this->db->execute();
     }
+    public function getAllMesages(){//SELECT * FROM `professors` WHERE 1
+        $this->db->query('SELECT messages.*, user.*
+        FROM messages
+        INNER JOIN user ON user.id = messages.fk_user;');
+        try{
+            return $this->db->resultSet();
+            
+        }catch(EXCEPTION $e){
+            return 'ERROR '. $e->getMessage();
+        }
+        
+    }
 
 
 }

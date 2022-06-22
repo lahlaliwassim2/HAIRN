@@ -3,7 +3,8 @@
     public function __construct(){
       $this->ProductModel= $this->model('ProduitModel');
       $this->CoiffeurModel= $this->model('CoiffeurModel');
-      $this->servicesModel= $this->model('SevicesModel');     
+      $this->servicesModel= $this->model('SevicesModel');   
+      $this->ModelMessage= $this->model('ModelMessage');  
     }
     
     public function index(){
@@ -36,7 +37,10 @@
       $AllProducts = $this->ProductModel->getAllProducts();
       $this->view('pages/products',$AllProducts);
     }
-
+    public function messageadmin(){
+      $messages = $this->ModelMessage->getAllMesages();
+      $this->view('pages/admin/message',$messages);
+    }
 
     public function coiffeur(){
       $coiffeurs = $this->CoiffeurModel->getCoiffeur(); 

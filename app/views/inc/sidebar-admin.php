@@ -32,7 +32,7 @@
                         class="fa mx-5 fa-tachometer-alt me-2"></i>Réservation</a>
             </div>
             <div class="nav-item">
-                <a href="<?php echo URLROOT ?>/pages/adminMessages" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
+                <a href="<?php echo URLROOT ?>/pages/messageadmin" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                         class="fa mx-5 fa-tachometer-alt me-2"></i>Messages</a>
             </div>
             

@@ -1,3 +1,5 @@
+<?php require APPROOT . './views/inc/header.php'; ?>
+<?php require APPROOT . './views/inc/sidebar-admin.php'; ?>
 <!-- Content Start -->
 <div class="content ">
 
@@ -20,64 +22,39 @@
     
     <!--end Header admin -->
        <!-- Page Header Start -->
-       <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
-        <div class="container-fluid page-header-inner py-5">
-            <div class="container text-center pb-5">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Mes messages</h1>
-                <nav aria-label="breadcrumb">
-                   
-                </nav>
-            </div>
-        </div>
-    </div>
-    <!-- Page Header End -->
+       <div class="container-fluid d-flex justify-content-around mt-2">
 
+
+
+<div class="row">
+ <?php foreach ($data as $key => $value ) :?>
     
-            
-    
-    
-    <div class="container text-center mt-5 mb-2">
-        <h1 class="mb-0">Meet our agents</h1><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span></div>
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="https://i.imgur.com/uppKNuF.jpg" width="90">
-                    <h5 class="mt-3 name">Samuel Plamer</h5><span class="work d-block">Comapay agents house</span><span class="work d-block">real estate</span>
-                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
-                    <div class="mt-4">
-                        <h6 class="v-profile">View Profile</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="https://i.imgur.com/oJmLthK.jpg" width="90">
-                    <h5 class="mt-3 name">Nancy Markus</h5><span class="work d-block">Comapay agents house</span><span class="work d-block">real estate</span>
-                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
-                    <div class="mt-4">
-                        <h6 class="v-profile">View Profile</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="https://i.imgur.com/HFpxxJz.jpg" width="90">
-                    <h5 class="mt-3 name">Martha Col</h5><span class="work d-block">Comapay agents house</span><span class="work d-block">real estate</span>
-                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
-                    <div class="mt-4">
-                        <h6 class="v-profile">View Profile</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="https://i.imgur.com/MZm1LNz.jpg" width="90">
-                    <h5 class="mt-3 name">Marry Jones</h5><span class="work d-block">Comapay agents house</span><span class="work d-block">real estate</span>
-                    <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div>
-                    <div class="mt-4">
-                        <h6 class="v-profile">View Profile</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   <div class="col-lg-4 mt1">
+     
+      <div class="card">
+         <div class="card-body text-center">
+           
+            <img src="https://i.imgur.com/uIgDDDd.jpg" class="rounded-circle" width="200" height="200"> 
+            <h5 class="card-title mt-2 mb-1"><?= $value->sujet?></h5>
+            <span class="fs-2 mb-3 font-weight-bold"></span>
+            <p class="mb-3 mt-3">"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+           
+          
+
+         </div>
+      </div>
+   </div>
+<?php endforeach ;?>
+
+
+
 
 </div>
-    <!-- Content End -->
+
+
+
+
+
+
+
+
