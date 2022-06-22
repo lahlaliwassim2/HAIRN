@@ -18,6 +18,12 @@ class Message extends controller{
         redirect('pages/profil');
 
     }
+    
+    public function getMessage(){
+        $messages = $this->ModelMessage->getAllMesages();
+        $this->view('pages/admin/message',$messages);
+    
+    }
 
 }
 
