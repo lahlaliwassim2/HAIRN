@@ -43,24 +43,22 @@
         <!-- Page Header Start -->
         <div class="container-xxl py-5">
             <div class="row g-4">
-
+<?php foreach($data as $coiffeurs) : ?>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded shadow overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="<?php echo URLROOT ?>/img/team-1.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo URLROOT ?>/upload/<?php echo $coiffeurs->image ?>"  alt="">
                             <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                <a class="btn btn-square btn-info mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-info mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-info mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                
                             </div>
                         </div>
                         <div class="text-center p-4 mt-3">
-                            <h5 class="fw-bold mb-0">nom?></h5>
-                            <small class="text-uppercase">chaise ?></small>
+                            <h5 class="fw-bold mb-0"><?= $coiffeurs->nom?>  <?= $coiffeurs->prenom?></h5>
+                            <small class="text-uppercase"><?= $coiffeurs->chaise?>></small>
                         </div>
                     </div>
                 </div>
-
+<?php endforeach ;?>
             </div>
         </div>
 
@@ -107,27 +105,35 @@
 
                                                         <th>Photo</th>
                                                         <th class="max-width">Name</th>
+                                                        <th class="max-width">prenom</th>
                                                         <th class="sortable">chaise</th>
 
                                                         <th>heure de travail </th>
+                                                        <th>options </th>
 
                                                     </tr>
                                                 </thead>
-
+                                                <?php foreach($data as $coiffeurs) : ?>
                                                 <tr>
 
                                                     <td class="align-middle text-center">
                                                         <div class="bg-light d-inline-flex justify-content-center align-items-center align-top" style="width: 35px; height: 35px; border-radius: 3px;">
-                                                            <img class="rounded-circle" src="<?php echo URLROOT ?>/img/room-1.jpg ?>" alt="" width="50">
+                                                            <img class="rounded-circle" src="<?php echo URLROOT ?>/upload/<?php echo $coiffeurs->image ?>" alt="" width="50">
                                                         </div>
                                                     </td>
                                                     <td class="text-nowrap align-middle">
-                                                        < $products->label?>
+                                                    <?= $coiffeurs->nom?>
                                                     </td>
                                                     <td class="text-nowrap align-middle">
-                                                        < $products->description?>
+                                                    <?= $coiffeurs->prenom?>
                                                     </td>
-
+                                                    <td class="text-nowrap align-middle">
+                                                    <?= $coiffeurs->chaise?>
+                                                    </td>
+                                                    <td class="text-nowrap align-middle">
+                                                    <?= $coiffeurs->date?>
+                                                    </td>
+                                                   
 
                                                     <td class="text-center align-middle">
                                                         <div class="btn-group align-top">
@@ -137,7 +143,7 @@
                                                     </td>
                                                 </tr>
 
-
+                                                <?php endforeach ;?>
                                         </div>
 
 

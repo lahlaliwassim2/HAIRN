@@ -23,6 +23,13 @@
 .para-caros{
   max-width: 700px;
 }
+.zzindex{
+  z-index: 11;
+  background-color: #8f8fd8;
+  top: 5%;
+  height: 15%px;
+  padding: 0px;
+}
 
 
 

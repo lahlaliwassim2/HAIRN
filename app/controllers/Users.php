@@ -11,7 +11,7 @@
         // Process form
   
         // Sanitize POST data
-        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $_POST = filter_input_array(INPUT_POST);
 
         // Init data
         $data =[
@@ -105,7 +105,7 @@
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Process form
         // Sanitize POST data
-        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $_POST = filter_input_array(INPUT_POST);
         
         // Init data
         $data =[
@@ -143,12 +143,17 @@
 
           $role = $this->isLoggedIn();
 
+
           if($role){
+            if($_SESSION['role'] == 'client'){
             
-          redirect("pages/about");
+          redirect("pages/index");
+          }else{
+            redirect("pages/adminprod");
           }
+        }
           else{
-            redirect("pages/index");
+            redirect("pages/about");
           }
           //creat session
         }
@@ -187,7 +192,7 @@
     }
 
     public function isLoggedIn(){
-      if(isset($_SESSION['ID'])){
+      if(isset($_SESSION['id'])){
         return true;
       } else {
         return false;
@@ -209,4 +214,31 @@
       session_destroy();
       redirect('pages/formLogin');
     }
+
+    public function rendez_vous(){
+      $data = $_POST;
+
+      if($this->userModel->check_Reservation($data['datTime'])){
+       
+        echo
+              "
+              <script>
+                alert('choisir autre time');
+              </script>
+              ";
+              echo 'fdf';
+              redirect('pages/index');
+            }
+      else{
+        $idUser = $_SESSION['id'];
+        var_dump($idUser);
+        $this->userModel->rendez_vous($data,$idUser);
+        redirect('pages/index');
+      }
+
+      
+    }
+
+
+    
   }

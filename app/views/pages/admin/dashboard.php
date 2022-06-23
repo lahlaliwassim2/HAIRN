@@ -2,20 +2,23 @@
 <?php require APPROOT . './views/inc/sidebar-admin.php'; ?>
 <div class="content ">
 
+    <!--Star Header admin -->
+    <header class="d-flex m-2 justify-content-between bg-dark align-items-center navbar navbar-expand  sticky-top px-4 py-0">
+        <div class="sidebar-toggler flex-shrink-0 btn">
+            <i class="fa fa-bars"></i>
+        </div>
 
-
-  <!--Star Header admin -->
-  <header class="d-flex container m-2 justify-content-between align-items-center navbar navbar-expand  sticky-top px-4 py-0">
-    <div class="sidebar-toggler flex-shrink-0 btn">
-      <i class="fa fa-bars"></i>
-    </div>
-
-    <div class="mt-1 d-flex gap-3 p-1">
-      <div class="d-flex ms-4">
-        <input type="search" name="search" id="search" placeholder="search..." class="border-0 search">
-        <i class="recherche btn fas fa-search"></i>
-      </div>
-    </div>
+        <div class="mt-1 d-flex gap-3">
+            <div class="d-flex ms-4">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch">
+                    <button class="btn btn-info" id="btnNavbarSearch" type="button"></button>
+                      
+                    
+                </div>
+            </div>
+        </div>
+    </header>
   </header>
   <!--end Header admin -->
   <!-- Page Header Start -->

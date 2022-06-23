@@ -1,5 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php 
+
 if($_SESSION['role'] == 'client'){ 
      require APPROOT . '/views/inc/navbar-client.php'; 
 }else{
@@ -311,7 +312,7 @@ if($_SESSION['role'] == 'client'){
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <form>
+                            <form method="POST" action="<?php echo URLROOT ?>/Users/rendez_vous">
                                 <div class="row g-3">
                                     <div>
                                         <div class="form-floating">
@@ -328,7 +329,7 @@ if($_SESSION['role'] == 'client'){
                                     </div>
                                     <div class="">
                                         <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="datetime-local" class="form-control datetimepicker-input"
+                                            <input type="datetime-local" class="form-control datetimepicker-input" name="datTime"
                                                 id="checkin" placeholder="Check In" data-target="#date3"
                                                 data-toggle="datetimepicker">
                                             <label for="checkin">Check In</label>
@@ -339,7 +340,7 @@ if($_SESSION['role'] == 'client'){
 
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select3">
+                                            <select class="form-select" id="select3" name="chez">
                                                 <option value="1">chaise A</option>
                                                 <option value="2">chaise B</option>
                                                 <option value="3">chaise C</option>
@@ -350,7 +351,7 @@ if($_SESSION['role'] == 'client'){
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Special Request" id="message"
+                                            <textarea class="form-control" placeholder="Special Request" id="message" name="message"
                                                 style="height: 100px"></textarea>
                                             <label for="message">Special Request</label>
                                         </div>

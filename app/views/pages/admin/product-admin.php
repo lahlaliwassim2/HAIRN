@@ -176,8 +176,8 @@
                                                                 <td class="text-nowrap align-middle"><span><?= $products->quantite?></span></td>
                                                         <td class="text-center align-middle">
                                                             <div class="btn-group align-top">
-                                                            <a href="<?php echo URLROOT ?>/ProductController/getProduit/<?php echo $products->id?>">    <button class="btn btn-sm btn-outline-secondary badge" type="button" data-toggle="modal" data-target="#user-form-modal">Edit</button></a>
-                                                            <a href="<?php echo URLROOT; ?>/ProductController/deleteProduct/<?php echo $products->id ?>"">   <button class="btn btn-sm btn-outline-secondary badge" type="button"><i class="fa fa-trash"></i></button> </a>
+                                                            <a href="<?php echo URLROOT ?>/ProductController/getProduit/<?php echo $products->id?>">    <button class="btn btn-sm " type="button" >Edit</button></a>
+                                                            <a href="<?php echo URLROOT; ?>/ProductController/deleteProduct/<?php echo $products->id ?>">   <button class="btn btn-sm " type="button"><i class="fa fa-trash"></i></button> </a>
                                                             </div>
                                                         </td>
                                                     </tr>

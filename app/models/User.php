@@ -51,4 +51,31 @@
         return false;
       }
     }
+
+
+    public function rendez_vous($data,$idUser){
+      $this->db->query('INSERT INTO `rendez-vous`(`datTime`, `id-user`, `chez`, `message`) VALUES (:datTime,:id_user,:chez,:message)');
+      // Bind values
+      $this->db->bind(':datTime', $data['datTime']);
+      $this->db->bind(':id_user', $idUser);
+      $this->db->bind(':chez', $data['chez']);
+      $this->db->bind(':message', $data['message']);
+      $this->db->execute();
+    }
+
+
+    public function check_Reservation($datTime){
+      $this->db->query('SELECT * FROM `rendez-vous` WHERE datTime = :datTime');
+      // Bind value
+      $this->db->bind(':datTime', $datTime);
+
+      $row = $this->db->single();
+
+      if($row){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
   }

@@ -41,6 +41,7 @@ public function addProduct(){
 
 
     public function checkImg(){ 
+    
             $fileName = $_FILES["img"]["name"];
             $fileSize = $_FILES["img"]["size"];
             $tmpName = $_FILES["img"]["tmp_name"];
@@ -71,8 +72,8 @@ public function addProduct(){
               move_uploaded_file($tmpName,$folder. $newImageName);
               return $newImageName;
 
-          }
-    }
+            }
+                               }
     public function sherchProduct($type){
       $product =   $this->ProductModel-> getProduct($type);
       $this->view('/pages/admin/product-admin',$product);
