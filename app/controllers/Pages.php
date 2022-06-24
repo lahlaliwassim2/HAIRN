@@ -5,6 +5,8 @@
       $this->CoiffeurModel= $this->model('CoiffeurModel');
       $this->servicesModel= $this->model('SevicesModel');   
       $this->ModelMessage= $this->model('ModelMessage');  
+      $this->User  = $this->model('User');
+      
     }
     
     public function index(){
@@ -13,21 +15,30 @@
       $barbe =   $this->ProductModel->rowCount("barbe");
       $odeurs =   $this->ProductModel->rowCount("odeurs");
       $cheveux =   $this->ProductModel->rowCount("cheveux");
+      $prods = $this->ProductModel->rowOneCount();
+      $servcs = $this->servicesModel->rowOneCount();
+      $coifs = $this->CoiffeurModel->rowOneCount();
 
       $data = [
         'coiffeur' => $coiffeurs,
         'visage' => $visage,
         'barbe' => $barbe,
         'odeurs' => $odeurs,
+        'prods' => $prods,
         'cheveux' => $cheveux,
+        'servcs' => $servcs ,
+        'coifs' => $coifs
       ];
 
-    
-
-    
-      
+     if(isset($_SESSION['id'])){
+     if($_SESSION['role'] == 'client'){
       $this->view('pages/index',$data); }
-      
+      else{
+        $this->view('pages/formLogin');
+      }}else{
+        $this->view('pages/index',$data);
+      }
+    }
     public function couifAdmn(){
       if(isset($_SESSION['id'])){
         if($_SESSION['role'] == 'admin'){
@@ -42,7 +53,7 @@
 
     public function contact(){
       if(isset($_SESSION['id'])){
-        if($_SESSION['role'] == 'clien'){
+        if($_SESSION['role'] == 'client'){
 
     
       $this->view('pages/contact');
@@ -104,6 +115,15 @@
       if($_SESSION['role'] == 'admin'){
       $AllProducts = $this->ProductModel->getAllProducts();
       $this->view('pages/admin/product-admin',$AllProducts);
+    }else{
+      redirect('pages/formLogin');
+    }
+  }
+
+  public function showReservation(){
+    if($_SESSION['role'] == 'admin'){
+      $Reservation = $this->User->getAllReserve();
+      $this->view('pages/admin/rendez-admin',$Reservation);
     }else{
       redirect('pages/formLogin');
     }
@@ -185,12 +205,13 @@
     public function adminDash(){
       if(isset($_SESSION['id'])){
         if($_SESSION['role'] == 'admin'){
-
-        $this->view('pages/admin/dashboard');
-    }else{
+    
+       $this->view('pages/admin/dashboard');
+     }else{
       $this->view('pages/formLogin');
+     }
     }
-  }}
+     }
     public function updateProuct(){
       if(isset($_SESSION['id'])){
         if($_SESSION['role'] == 'admine'){
