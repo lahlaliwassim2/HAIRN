@@ -31,6 +31,7 @@ public function addService($data,$img){
 }
 public function rowOneCount(){
     $this->db->query('SELECT * FROM `services`');
+    $this->db->execute();
   $row =  $this->db->rowCount();
    
             
