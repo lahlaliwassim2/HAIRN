@@ -7,9 +7,7 @@
             <div class="d-flex flex logbag row g-0">
                 <div class="col-md-6 mt-3">
                     <div class="card card1 logbag  p-3">
-                        <div class="d-flex   flex-column">
-                            <img src="https://i.imgur.com/kFFNY1q.png" height="50" width="50" /> <span class="login mt-3">Log in</span>
-                        </div>
+                       
                         <div class="input-field d-flex flex-column mt-3">
 
                             <input name="email" class="form-control iam <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" placeholder="<?php echo  (!empty($data['email_err'])) ? $data['email_err'] : ' email'; ?>">

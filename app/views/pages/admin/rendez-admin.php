@@ -1,4 +1,6 @@
 <!-- Content Start -->
+<?php require APPROOT . './views/inc/header.php'; ?>
+<?php require APPROOT . './views/inc/sidebar-admin.php'; ?>
 <div class="content  ">
 
 
@@ -164,3 +166,5 @@
     <!-- Sale & Revenue Start -->
 </div>
 <!-- Content End -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo URLROOT; ?>/js/main.js"></script>

@@ -75,5 +75,11 @@
             $this->db->execute();          
             return  $this->db->rowCount();  
         }
-        
+        public function rowOneCount(){
+            $this->db->query('SELECT * FROM `produits`');
+          $row =  $this->db->rowCount();
+           
+                    
+            return $row ;
+        }
     }

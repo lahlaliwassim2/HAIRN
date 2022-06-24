@@ -6,8 +6,6 @@
       $this->db = new Database;
     }
     // Register User 
- 
-
     // Regsiter user
     public function register($data){
       $this->db->query('INSERT INTO user (nom,prenom, email, password) VALUES(:name,prenom ,:email, :password)');
@@ -16,7 +14,6 @@
       $this->db->bind(':name', $data['prenom']);
       $this->db->bind(':email', $data['email']);
       $this->db->bind(':password', $data['password']);
-
       // Execute
       if($this->db->execute()){
         return true;
@@ -78,4 +75,16 @@
         return false;
       }
     }
+    public function getAllReserve(){//SELECT * FROM `professors` WHERE 1
+      $this->db->query('SELECT rendez-vous.*, user.*
+      FROM rendez-vous
+      INNER JOIN user ON user.id = rendez-vous.fk_user;');
+      try{
+          return $this->db->resultSet();
+          
+      }catch(EXCEPTION $e){
+          return 'ERROR '. $e->getMessage();
+      }
+      
+  }
   }

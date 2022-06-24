@@ -35,28 +35,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 wow fadeIn">
-                        <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s"
-                                    src="<?php echo URLROOT ?>/img/about-1.jpg" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
-                                    src="<?php echo URLROOT ?>/img/about-2.jpg">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s"
-                                    src="<?php echo URLROOT ?>/img/about-3.jpg">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s"
-                                    src="<?php echo URLROOT ?>/img/about-4.jpg">
-                            </div>
-                        </div>
+                    <div class="row">
+                    <div class="col-lg-6">
+                    <img style="width : 100%" src="<?php echo URLROOT ?>/img/team-1.jpg" alt="">
                     </div>
                     <div class="col-md-6">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                        <div class=" d-flex fadeInUp">
                             <form action="<?php echo URLROOT ?>/Message/SendMessage" method="POST">
                                 <div class="row g-3">
                                     <div class="col-12">
@@ -81,6 +65,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div></div>
         <!-- Contact End -->
 

@@ -66,43 +66,6 @@
 
         <!--tableau d'achat-->
 
-        <div>
-            <div class="table-wrap table-responsive">
-                <table class="table table-responsive table-borderless">
-                    <thead>
-
-                        <th>sujet</th>
-                        <th>content</th>
-                        <th>options</th>
-                       
-
-                    </thead>
-                    <?php foreach($data as $message) : ?>
-                    <tbody>
-                        <tr class="align-middle alert border-bottom" role="alert">
-                            <td>
-                                <div>
-                                    <h5 class="m-0 fw-bold">Sneakers Shoes 2020 For Men</h5>
-                                   
-                                </div>
-                            </td>
-                            <td class="text-center">
-                               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit omnis eaque in distinctio quibusdam quisquam, adipisci natus modi reprehenderit. Recusandae accusamus illum molestias ea deb.</p>
-                            </td>
-                            <td>
-                                <div>
-
-                                <a href="<?php echo URLROOT ?>/message/deleteMessage/<?php echo $products->id ?>">   <button class="btn text-info" type="button">delete</button> </a>
-                                </div>
-                            </td>
-
-
-
-                    </tbody>
-                    <?php endforeach ;?>
-                </table>
-            </div>
-        </div>
 
 
 

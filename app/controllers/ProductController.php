@@ -72,8 +72,8 @@ public function addProduct(){
               move_uploaded_file($tmpName,$folder. $newImageName);
               return $newImageName;
 
-            }
-                               }
+          }
+               }
     public function sherchProduct($type){
       $product =   $this->ProductModel-> getProduct($type);
       $this->view('/pages/admin/product-admin',$product);

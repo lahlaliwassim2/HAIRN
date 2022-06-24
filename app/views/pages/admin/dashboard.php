@@ -45,7 +45,7 @@
                   <p class="text-secondary mb-1">admin</p>
                   <p class="text-muted font-size-sm"></p>
 
-                  <button class="btn btn-outline-info">Mes Messages</button>
+                 <a href="<?php echo URLROOT ?>/pages/messageadmin"> <button class="btn btn-outline-info">Mes Messages</button></a>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@
                   <h6 class="mb-0">Full Name</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                  wassim lahlali
+                <?= $_SESSION['name'] ?>
                 </div>
               </div>
               <hr>
@@ -69,17 +69,12 @@
                   <h6 class="mb-0">Email</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                  fip@jukmuh.al
+                <?= $_SESSION['email'] ?>
                 </div>
               </div>
               <hr>
               <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0">Phone</h6>
-                </div>
-                <div class="col-sm-9 text-secondary">
-                  0655930708
-                </div>
+               
               </div>
               <hr>
 
@@ -116,5 +111,7 @@
 
 <!-- Sale & Revenue Start -->
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo URLROOT; ?>/js/main.js"></script>
 
 <!-- Content End -->

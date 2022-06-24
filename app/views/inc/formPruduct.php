@@ -2,7 +2,7 @@
 <form id="form" action="<?php echo URLROOT ?>/ProductController/addProduct" method="POST" enctype="multipart/form-data">
 <div class="container">
     
-div class="col-md-6 container">
+<div class="col-md-6 container">
    <div class="alert alert-general">
       <i class="fa fa-info"></i> General Message. Your Message Comes Here
       <span class="close"></span>

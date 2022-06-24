@@ -13,7 +13,7 @@
            
         </div>
         <div class="navbar-nav w-100">
-            <a href="dashbord.php" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
+            <a href="<?php echo URLROOT ?>/pages/admindash" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i
                     class="fa mx-5 fa-tachometer-alt me-2"></i>Dashboard</a>
             <div class="nav-item">
                 <a href="<?php echo URLROOT ?>/pages/adminService" class="nav-item dash nav-link my-3 mx-2 active" style="backdrop-filter: blur(14px);"><i

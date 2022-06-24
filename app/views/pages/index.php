@@ -1,9 +1,11 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php 
+if(isset($_SESSION['id'])){
+
 
 if($_SESSION['role'] == 'client'){ 
      require APPROOT . '/views/inc/navbar-client.php'; 
-}else{
+}}else{
      require APPROOT . '/views/inc/navbar-user.php'; 
 }
 ?>
@@ -21,7 +23,7 @@ if($_SESSION['role'] == 'client'){
                             <div class="p-3 para-caros">
                                 <h6 class="section-title text-white text-uppercase mb-3  ">Barber Shop</h6>
                                 <h1 class="display-3 text-white mb-4  ">le salon de réussite dans pfr</h1>
-                                <?php if(($_SESSION['role']=='client')) : ?>
+                                <?php   if(isset($_SESSION['id'])) : ?>
                                 <a href="" class="btn btn-info py-md-3 px-md-5 me-3  ">PRODUITS</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">SERVICES</a>
                                 <?php else : ?>
@@ -38,13 +40,13 @@ if($_SESSION['role'] == 'client'){
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">BARBER
                                     SHOP</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Découvrire notre salon </h1>
-                                <?php if($_SESSION['role'] == 'client') : ?>
+                                <?php   if(isset($_SESSION['id'])) : ?>
                                 <a href="" class="btn btn-info py-md-3 px-md-5 me-3  ">PRODUITS</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">SERVICES</a>
                                 <?php else : ?>
                                     <a href="" class="btn btn-info py-md-3 px-md-5 me-3  ">SIGN UP</a>
                                 <a href="" class="btn btn-light py-md-3 px-md-5 ">LOG IN </a>
-                                <?php  endif ;?>
+                                <?php  endif ;?> 
                             </div>
                         </div>
                     </div>
@@ -78,8 +80,8 @@ if($_SESSION['role'] == 'client'){
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-info mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">coupes</p>
+                                        <h2 class="mb-1" data-toggle="counter-up"><?php echo $data['prods']; ?></h2>
+                                        <p class="mb-0">Produits</p>
                                     </div>
                                 </div>
                             </div>
@@ -87,8 +89,8 @@ if($_SESSION['role'] == 'client'){
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-info mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">coiffeurs</p>
+                                        <h2 class="mb-1" data-toggle="counter-up"><?php echo $data['servcs']; ?></h2>
+                                        <p class="mb-0">Services</p>
                                     </div>
                                 </div>
                             </div>
@@ -96,8 +98,8 @@ if($_SESSION['role'] == 'client'){
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-info mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">BARBERS</p>
+                                        <h2 class="mb-1" data-toggle="counter-up"><?php echo $data['coifs']; ?></h2>
+                                        <p class="mb-0">coiffeurs</p>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +115,7 @@ if($_SESSION['role'] == 'client'){
 
 
         <!-- Room Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl ">
             <div class="container">
                 <div class="text-center wow fadeInUp">
                     <h6 class="section-title text-center text-info text-uppercase">NOTRE Services</h6>
@@ -125,7 +127,7 @@ if($_SESSION['role'] == 'client'){
                             <div class="position-relative">
                                 <img class="img-fluid" style="height: 266px;" src="<?php echo URLROOT ?>/img/room-1.jpg" alt="">
                                 <small
-                                    class="position-absolute start-0 top-100 translate-middle-y bg-info text-white rounded py-1 px-3 ms-4">+100
+                                    class="position-absolute start-0 top-100 translate-middle-y bg-info text-white rounded  px-3 ms-4">+100
                                     exemplest</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -137,7 +139,11 @@ if($_SESSION['role'] == 'client'){
                                 <p class="text-body mb-3">Façon de disposer, tailler ou modeler la chevelure afin de lui
                                     apporter une structure à sa convenance.</p>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/cheveux">View all</a>
+                                <?php   if(isset($_SESSION['id'])) : ?>
+                                    <a class="btn btn-info   px-4" href="<?php echo URLROOT ?>/ServicesController/getService/cheveux">View all</a>
+                                    <?php else : ?>
+                                        <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/pages/formLogin">View all</a>
+                                        <?php  endif ;?>
 
                                 </div>
                             </div>
@@ -160,8 +166,11 @@ if($_SESSION['role'] == 'client'){
                                 <p class="text-body mb-3">Nous vous ferons une description rapide de chaque style, vous
                                     indiquerons quel trait de .</p>
                                 <div class="d-flex justify-content-center">
+                                     <?php   if(isset($_SESSION['id'])) : ?>
                                     <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/barbe">View all</a>
-
+                                    <?php else : ?>
+                                        <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/pages/formLogin">View all</a>
+                                        <?php  endif ;?>
                                 </div>
                             </div>
                         </div>
@@ -183,8 +192,11 @@ if($_SESSION['role'] == 'client'){
                                 <p class="text-body mb-3">Un soin du visage est un soin du corps destiné à prépar un
                                     pain dermatologique, un lait de toi.</p>
                                 <div class="d-flex justify-content-center">
+                                <?php   if(isset($_SESSION['id'])) : ?>
                                     <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/ServicesController/getService/visage">View all</a>
-
+                                    <?php else : ?>
+                                        <a class="btn btn-info  py-2 px-4" href="<?php echo URLROOT ?>/pages/formLogin">View all</a>
+                                        <?php  endif ;?>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +251,7 @@ if($_SESSION['role'] == 'client'){
                                 <a class=" " href="<?php echo URLROOT ?>/ProductController/getProduct/visage">
                                     <div class="rounded shadow overflow-hidden">
                                         <div class="position-relative">
-                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/ch3ar.jpg" alt="">
+                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/visss.png" alt="">
 
                                         </div>
                                         <div class="text-center p-4 mt-3">
@@ -253,7 +265,7 @@ if($_SESSION['role'] == 'client'){
                                 <a class="" href="<?php echo URLROOT ?>/ProductController/getProduct/Barbe">
                                     <div class="rounded shadow overflow-hidden">
                                         <div class="position-relative">
-                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/ch3ar.jpg" alt="">
+                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/barbe.png" alt="">
 
                                         </div>
                                         <div class="text-center p-4 mt-3">
@@ -267,7 +279,7 @@ if($_SESSION['role'] == 'client'){
                                 <a href="<?php echo URLROOT ?>/ProductController/getProduct/cheveux">
                                     <div class="rounded shadow overflow-hidden">
                                         <div class="position-relative">
-                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/ch3ar.jpg" alt="">
+                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/cheveux.png" alt="">
 
                                         </div>
                                         <div class="text-center p-4 mt-3">
@@ -281,7 +293,7 @@ if($_SESSION['role'] == 'client'){
                                 <a class="service-item " href="<?php echo URLROOT ?>/ProductController/getProduct/Odeurs">
                                     <div class="rounded shadow overflow-hidden">
                                         <div class="position-relative">
-                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/ch3ar.jpg" alt="">
+                                            <img class="img-fluid im" src="<?php echo URLROOT ?>/img/ri7a.png" alt="">
 
                                         </div>
                                         <div class="text-center p-4 mt-3">

@@ -29,5 +29,12 @@ public function addService($data,$img){
     $this->db->bind(5 ,$data['rate']);
     $this->db->execute();
 }
+public function rowOneCount(){
+    $this->db->query('SELECT * FROM `services`');
+  $row =  $this->db->rowCount();
+   
+            
+    return $row ;
+}
 
 }

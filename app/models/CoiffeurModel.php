@@ -24,7 +24,13 @@
     $this->db->bind(5 ,$img);
      $this->db->execute();
      }
-    
+     public function rowOneCount(){
+        $this->db->query('SELECT * FROM `produits`');
+      $row =  $this->db->rowCount();
+       
+                
+        return $row ;
+    }
         
     
 }
